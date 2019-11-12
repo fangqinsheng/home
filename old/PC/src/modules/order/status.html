@@ -1,0 +1,85 @@
+<div class="box1 cl">
+  <div class="box1-l">
+    <div class="num">订单号：<em>{{ code }}</em></div>
+    <h3 class="title">{{ title }}</h3>
+
+    {{ if payment }}
+    <div class="tips"><em>请尽快完成支付</em></div>
+    <a href="" class="btn btn--red">去支付</a>
+    {{ /if }} {{ if delivery }}
+    <a href="" class="btn border--red">催单</a>
+    {{ /if }} {{ if outbound }}
+    <a href="" class="btn border--red">确认收货</a>
+    {{ /if }} {{ if arrive }}
+    <a href="" class="btn border--red">确认收货</a>
+    {{ /if }} {{ if sign }}
+    <a href="" class="btn border--red">申请售后</a>
+    {{ /if }}
+
+    <div class="cl opt">
+      <a href="javaScript:void(0);" class="fl">
+        <i class="iconfont icon-fox"></i>
+        <span>打印订单</span>
+      </a>
+      <a href="javaScript:void(0);" class="fr">
+        <i class="iconfont icon-cancel"></i>
+        <span>取消订单</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="box1-r">
+    <div class="process__wrapper">
+      <div class="svg done">
+        <i class="iconfont icon-submit done"></i>
+        <ul>
+          <li class="status">提交订单</li>
+          <li class="time">2019-02-20 17:02:08</li>
+        </ul>
+      </div>
+      <div class="process done">
+        <div class="process-bar"></div>
+      </div>
+      <div class="svg done">
+        <i class="iconfont icon-payment-success done"></i>
+        <ul>
+          <li class="status">付款成功</li>
+          <li class="time"></li>
+        </ul>
+      </div>
+      <div class="process done">
+        <div class="process-bar"></div>
+      </div>
+      <div class="svg done">
+        <i class="iconfont icon-send done"></i>
+        <ul>
+          <li class="status">商品出库</li>
+          <li class="time"></li>
+        </ul>
+      </div>
+      <div class="process done">
+        <div class="process-bar"></div>
+      </div>
+      <div class="svg done">
+        <i class="iconfont icon-receipt done"></i>
+        <ul>
+          <li class="status">等待收货</li>
+          <li class="time"></li>
+        </ul>
+      </div>
+      <div class="process doing">
+        <div class="process-bar"></div>
+      </div>
+      <div class="svg">
+        <i class="iconfont icon-finished"></i>
+        <ul>
+          <li class="status">完结</li>
+          <li class="time"></li>
+        </ul>
+      </div>
+    </div>
+    <p class="desc">
+      该订单会为您保留半小时（从提交算起），半小时后未支付成功，系统将自动取消订单。
+    </p>
+  </div>
+</div>

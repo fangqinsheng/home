@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="支付成功页" slick></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <template src="common/nav.html"></template>
+
+    <template
+      src="accountStatus/index.html"
+      title="订单支付成功，我们将第一时间为您发货！"
+      success
+    ></template>
+
+    <template src="common/footer.html"></template>
+    <script>
+      $(".adv").slick({
+        autoplay: true,
+        autoplaySpeed: 1200,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear"
+      });
+    </script>
+  </body>
+</html>

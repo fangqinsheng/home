@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="微信支付页"></template>
+  <body>
+
+    <template src="common/shortcut.html"></template>
+
+    <template src="common/header.html" search ></template>
+
+    <section class="admin">
+      <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <section class="admin-main">
+          <div class="tab__wrapper tab collect" id="collect">
+            <div class="tabBar cl">
+              <span>全部商品</span>
+              <span>后厨用品</span>
+              <span>楼面用品</span>
+              <span>周转用品</span>
+              <span>其他用品</span>
+            </div>
+
+            <template
+              src="admin/collect.html"
+              chef
+              ground
+              turnour
+              other
+            ></template>
+            <template src="admin/collect.html" chef></template>
+            <template src="admin/collect.html" ground></template>
+            <template src="admin/collect.html" turnour></template>
+            <template src="admin/collect.html" other></template>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script src="js/select.js"></script>
+    <template src="common/footer.html"></template>
+    <script>
+      $("#collect").tabs();
+    </script>
+  </body>
+</html>

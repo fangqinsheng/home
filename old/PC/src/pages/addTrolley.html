@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="惠而信商城结算页" slick></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" step></template>
+
+    <template src="common/nav.html"></template>
+
+    <!--添加购物车-->
+    <div class="trolley">
+      <div class="container">
+        <!--添加成功-->
+        <div class="addTrolley">
+          <!--标题-->
+          <h3 class="addTrolley-title">
+            <i class="sprite-success__small"></i>
+            <span>商品已成功加入进货单！</span>
+          </h3>
+          <!--商品-->
+          <div class="addTrolley-product">
+            <div class="p-img">
+              <a href="https://dummyimage.com/66x64/000/fff"
+              ><img src="https://dummyimage.com/66x64/000/fff" alt=""
+              /></a>
+            </div>
+
+            <div class="p-txt">
+              <div class="p-title">
+                <a href=""
+                >惠而信Welshine带密封圈标示盒储蓄盒半通明带盖子分色管理1L
+                  24套装-0212保鲜盒</a
+                >
+              </div>
+              <div class="p-spec">
+                颜色：车架一体成型 + ..... / 数量： 1
+              </div>
+            </div>
+          </div>
+          <!--按钮组-->
+          <div class="addTrolley-btn">
+            <a href="" class="bg-default">查看商品详情</a>
+            <a href="" class="bg-red iconfont">去购物车结算</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--猜你喜欢-->
+    <template src="trolley/rec.html"></template>
+
+    <template src="common/footer.html"></template>
+    <script>
+        $(".rec-slider").slick({
+            infinite: true,
+            dots: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
+  </body>
+</html>

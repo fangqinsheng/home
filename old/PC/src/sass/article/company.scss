@@ -1,0 +1,79 @@
+//公用
+.article {
+  padding: 30px 0;
+  &-aside {
+    width: 190px;
+    float: left;
+    background-color: #fff;
+    ul {
+      li {
+        width: 100%;
+
+        &.on {
+          a {
+            color: #4a90e2;
+            border-color: #4a90e2;
+          }
+        }
+        a {
+          display: block;
+          padding-left: 42px;
+          border-left: 4px solid #fff;
+          box-sizing: border-box;
+          font-size: 14px;
+          margin: 30px 0;
+          &:hover {
+            color: #4a90e2;
+          }
+          &:active {
+            color: #005abc;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    width: 960px;
+    margin-left: 210px;
+  }
+}
+
+//brand
+.admin-content {
+  h2 {
+    font-size: 500 18px/25px "PingFangSC-Medium";
+    color: #4a90e2;
+    padding: 20px 0;
+  }
+  p,
+  ul,
+  li {
+    font: 15px/22px "PingFangSC-Medium";
+    list-style: disc;
+  }
+}
+
+// contact
+.article-contact {
+  padding: 20px 0;
+}
+.article-contact li {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  float: left;
+  margin: 10px 0 10px 20px;
+  background: #fff;
+  width: 405px;
+  list-style: none;
+}
+.article-contact .c-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.article-contact .c-address {
+  line-height: 1.6;
+}
+.article-contact .c-tel {
+  line-height: 1.6;
+}

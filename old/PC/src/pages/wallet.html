@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<template src="common/head.html" title="个人中心"></template>
+<body>
+<template src="common/topnav.html"></template>
+
+<template src="common/header.html"></template>
+
+<section class="admin">
+    <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <template src="admin/wallet.html" title="我的钱包" icon="iconfont icon-wallet"></template>
+    </div>
+</section>
+
+<template src="common/footer.html"></template>
+<script>
+    $("#w-tab").tab({
+        index:0
+    });
+    window.onload = function () {
+        console.log(window.location)
+    }
+</script>
+</body>
+</html>

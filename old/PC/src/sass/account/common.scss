@@ -1,0 +1,36 @@
+/*****************************  common ********************************/
+.account {
+  padding: 30px 0;
+  background: #f8f7fa;
+  .txt {
+    margin-bottom: 30px;
+    .fl {
+      .payment-title {
+        font: bold 18px/24px "Microsoft YaHei";
+      }
+      .payment-subTitle {
+        font: 16px/20px "Microsoft YaHei";
+        .countdown {
+          color: #d0021b;
+        }
+      }
+    }
+    .fr {
+      text-align: right;
+      .payment-price {
+        font-size: 14px;
+        em {
+          color: #d3000d;
+        }
+      }
+      .btn {
+        font-size: 14px;
+        padding-top: 6px;
+      }
+    }
+  }
+  .card {
+    margin: 20px 0;
+    background: #fff;
+  }
+}

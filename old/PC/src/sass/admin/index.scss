@@ -1,0 +1,174 @@
+/**************************************************************
+************************* admin首页 ****************************
+**************************************************************/
+.admin-main {
+  .box1 {
+    height: 262px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .mt {
+      background: url("../img/admin/owner-bg.jpg") no-repeat;
+      width: 558px;
+      float: left;
+      height: 262px;
+      .inner {
+        padding: 56px 42px;
+      }
+      .img {
+        margin-left: 10px;
+        width: 70px; height: 70px;
+        img {
+          position: relative;
+          z-index: 2;
+          border-radius: 50%;
+          behavior: url(assets/PIE.htc);
+          //width: 100%;
+          border: 4px solid #fff;
+        }
+      }
+      .content {
+        margin-left: 40px;
+        color: #fff;
+        .title {
+          position: relative;
+          width: 132px;
+          font: bold 20px/28px "Microsoft YaHei";
+          margin-bottom: 10px;
+          .tag {
+            position: absolute;
+            right: 0;
+            bottom: -4px;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+        .desc {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 12px;
+        }
+        .apply-btn {
+          position: relative;
+          display: inline-block;
+          z-index: 2;
+          border-radius: 20px;
+          padding: 6px 20px;
+          behavior: url(assets/PIE.htc);
+        }
+      }
+    }
+
+    .mc {
+      padding: 34px 0;
+      width: 412px;
+      float: left;
+      background: #fff;
+      em,
+      i,
+      span,
+      a {
+        display: block;
+      }
+      .title {
+        font: 600 20px/28px "Microsoft YaHei";
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .item {
+        float: left;
+        width: 412/3 + px;
+        text-align: center;
+        .value {
+          font-size: 15px;
+          line-height: 32px;
+          margin-bottom: 8px;
+        }
+        .iconfont {
+          font-size: 30px;
+        }
+        .label {
+          line-height: 18px;
+          margin-bottom: 22px;
+        }
+        .link-btn {
+          color: #0d64b1;
+        }
+      }
+    }
+  }
+
+  .box3 {
+    background-color: #fff;
+    .title {
+      padding: 14px 20px;
+      border-bottom: 1px solid #f3f3f3;
+      line-height: 20px;
+      a {
+        font-size: 14px;
+        &:hover {
+          color: #d0021b;
+        }
+      }
+      i {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      span {
+        font-size: 18px;
+        margin-left: 5px;
+        font-weight: bold;
+      }
+    }
+    .status {
+      padding: 40px 70px;
+      border-bottom: 1px solid #f3f3f3;
+      ul li {
+        float: left;
+        width: (970-180)/5 + px;
+        text-align: center;
+        &.ui-tabs-active {
+          i,
+          span {
+            color: #d0021b;
+          }
+        }
+        a {
+          display: block;
+        }
+        i {
+          font-size: 40px;
+          display: block;
+        }
+        span {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .order {
+      //padding: 10px 40px;
+      .item {
+        padding: 12px 20px;
+        .img {
+          img {
+            display: block;
+          }
+        }
+        .content {
+          margin-left: 30px;
+        }
+        .trigger {
+          margin-top: 12px;
+          a {
+            margin-right: 10px;
+          }
+        }
+        .btn-confirm {
+          float: right;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

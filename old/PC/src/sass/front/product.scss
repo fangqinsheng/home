@@ -1,0 +1,291 @@
+/********************************************************************************************
+************************************** 产品列表页 ********************************************
+********************************************************************************************/
+.product {
+  position: relative;
+  margin-left: 220px;
+  width: 950px;
+}
+
+//侧边栏
+.p-aside {
+  float: left;
+  width: 200px;
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  .title {
+    padding: 10px 15px;
+    background-color: #ededed;
+  }
+
+  ul li {
+    padding: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .img {
+      margin-bottom: 10px;
+      a {
+        display: block;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .price {
+      font-size: 18px;
+      color: #d0021b;
+    }
+    .keywords {
+      display: block;
+      height: 40px;
+      line-height: 20px;
+      overflow: hidden;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+//list列表
+.p-list {
+  position: relative;
+  margin-left: 220px;
+  width: 950px;
+  .hd {
+    overflow: hidden;
+    //通用
+    .f-line {
+      padding: 6px 8px;
+      border-bottom: 1px solid #e7e3e7;
+      background-color: #f9f9f9;
+      zoom: 1;
+      height: 28px;
+      &.top {
+        background-color: #ededed;
+      }
+    }
+    // 排序
+    .f-sort {
+      &--title {
+        display: inline-block;
+        vertical-align: top;
+      }
+      &--up,
+      &--down {
+        display: inline-block;
+        i {
+          display: block;
+          background-image: url(../img/sprite.png);
+          width: 7px;
+          height: 4px;
+        }
+      }
+      a {
+        float: left;
+        display: block;
+        padding: 0 9px;
+        height: 24px;
+        line-height: 24px;
+        background-color: #fff;
+        border: 1px solid #e3e3e3;
+        margin-right: -1px;
+        &:hover {
+          position: relative;
+          border: 1px solid #005abc;
+          color: #005abc;
+        }
+        &.current {
+          background-color: #005abc;
+          border: #005abc 1px solid;
+          color: #fff;
+        }
+        .arrow-up {
+          margin-top: 6px;
+          background-position: 0 -27px;
+        }
+        .arrow-down {
+          margin-top: 3px;
+          background-position: 0 -9px;
+        }
+        &.current {
+          .sort-up {
+            .arrow-up {
+              background-position: 0 -18px;
+            }
+          }
+          .sort-down {
+            .arrow-down {
+              background-position: 0 0;
+            }
+          }
+        }
+      }
+    }
+    //过滤
+    .f-feature {
+      ul {
+        line-height: 26px;
+        height: 26px;
+        vertical-align: middle;
+        display: table-cell;
+        li {
+          margin-left: 6px;
+          line-height: 20px;
+          float: left;
+          a {
+            display: inline-block;
+            vertical-align: middle;
+            i {
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 4px;
+              background-color: #e3e3e3;
+            }
+            &.selected i {
+              background-color: #005abc;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-box {}
+
+.pb-wrap { margin-right: -10px; }
+
+.pb-item {
+  float: left;
+  position: relative;
+  margin-top: 12px;
+  margin-right: 10px;
+  width: (950-30)/4 + px;
+  &.hover {
+    box-shadow: 0 0 5px #e3e3e3;
+  }
+  .inner {
+    padding: 20px 16px;
+  }
+  //图片
+  .p-img {
+    margin-bottom: 5px;
+    img { width: 100%; }
+  }
+
+  //缩略图
+  .p-thumbnail {
+    margin-bottom: 10px;
+    padding-right: 40px;
+    .item {
+      float: left;
+    }
+
+    &.active {
+      padding: 0 20px;
+      .slick-list {
+
+      }
+    }
+    .slick-track {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  //价格
+  .p-price {
+    overflow: hidden;
+    line-height: 1;
+    color: #CE3336;
+    font-size: 16px;
+    margin-bottom: 5px;
+    em {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  //标题、关键字
+  .p-keywords {
+    height: 46px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+
+  .pagination { padding: 10px 0; }
+}
+
+/********************************************************************************************
+************************************** 过滤筛选条件 ********************************************
+********************************************************************************************/
+.filter {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  dl {
+    border-top: 1px dotted #e0e0e0;
+    zoom: 1;
+    &:first-child {
+      border-width: 0;
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+  dt {
+    float: left;
+    padding: 4px 6px;
+    width: 100px; text-align: center;
+    background-color: #FBFBFB;
+    span {
+      line-height:18px;
+      width: 6em;
+    }
+  }
+  dd {
+    float: left;
+    width: 1016px;
+    margin-right: 40px;
+    //padding: 0 40px;
+    //文字
+    .txt {
+      display: inline-block;
+      margin-left: 40px;
+      color: #979797;
+      white-space: nowrap;
+      &.on {
+        color: #4A90E2;
+      }
+    }
+    //形状
+    .square {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      vertical-align: middle;
+      margin-right: 18px;
+      &.bg-white.on {
+        &:before {
+          content: "\e608";
+          color: #333;
+        }
+      }
+      &.on {
+        &:before {
+          content: "\e608";
+          color: #fff;
+        }
+      }
+    }
+  }
+}

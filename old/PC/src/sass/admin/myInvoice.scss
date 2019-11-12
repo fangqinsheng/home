@@ -1,0 +1,148 @@
+/**************************************************************
+************************* 后台发票管理 ****************************
+**************************************************************/
+.invoice {
+  .tab {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .invoice-date {
+    width:200px; height:20px; line-height:20px; padding:4px;
+  }
+
+  .invoice-list {
+    padding: 20px;
+  }
+
+  &-comment {
+    padding: 10px 20px;
+    margin: 0 20px;
+    background-color: #cacbcb;
+    ol {
+      padding-left: 40px;
+    }
+  }
+
+  &-filter {
+    margin: 20px;
+    .btn {
+      padding: 5px 24px;
+    }
+    .f-item {
+      float: left; margin-right: 15px;
+      span { font-size: 13px; }
+      input, select {
+        border: 1px solid #ccc;
+        line-height: 30px; height: 30px;
+        width: 130px;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+    }
+    &-btn {
+      //padding: 10px ;
+    }
+  }
+
+  &-table {
+    tr {}
+    th {}
+    td {
+      border: 1px solid #f2f2f2;
+      padding: 10px 5px;
+    }
+    thead {}
+    tbody {}
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.invoice-table {
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid #f2f2f2;
+  border-top: 0;
+  color: #333;
+  width: 100%;
+  thead {
+    tr {
+      th {
+        background: #f5f5f5;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 5px;
+        text-align: center;
+        font-weight: 400;
+        color: #999;
+      }
+    }
+  }
+}
+
+.invoice-comment {
+
+  padding: 10px 20px;
+  background-color: #cacbcb;
+  ol {
+    padding-left: 40px;
+  }
+}
+
+
+/*************************************************************************
+**************************** invoice发票详情 *****************************
+*************************************************************************/
+.invoice-details {
+  //标题
+  &--title {
+
+  }
+  //发票信息
+  .i-status {
+    margin-bottom: 20px;
+  }
+  //发票代码
+  .i-info {}
+  //下载按钮
+  .invoice-download {
+    color: #0d64b1;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  //表格
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      background: #f5f5f5;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    thead {
+      tr {}
+      th {
+        padding: 0 20px;
+        h3 { float: left; font-weight: bold; }
+      }
+    }
+
+    tbody {
+      tr {}
+      td {
+        border: 1px solid #f2f2f2;
+        padding: 16px 10px;
+        img {}
+        a {}
+      }
+    }
+  }
+}

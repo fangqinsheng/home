@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/carousel/carousel",
+    "pages/collect/collect",
+    "pages/demo/demo"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "惠而信2019产品图册",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

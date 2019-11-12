@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="后台首页"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="admin/nav.html"></template>
+
+    <template src="common/nav.html"></template>
+
+    <section class="admin">
+      <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <section class="admin-main">
+          <!--面板-->
+          <div class="box1 cl">
+            <div class="mt cl">·
+              <div class="inner cl">
+                <div class="img fl">
+                  <img src="../img/user/1.jpg" alt="用户头像" width="70" height="70" />
+                </div>
+                <div class="content fl">
+                  <div class="title">
+                    系撸泡泡<span class="tag">终端商</span>
+                  </div>
+                  <div class="desc">
+                    成为经销商尊享用户<br />立即享有更优惠的采购价格
+                  </div>
+                  <a href="#" class="apply-btn bg-blue">立即申请</a>
+                </div>
+              </div>
+            </div>
+            <div class="mc">
+              <h2 class="title">我的钱包</h2>
+              <ul>
+                <li class="item">
+                  <a class="value">3</a>
+                  <i class="iconfont icon-coupons"></i>
+                  <span class="label">优惠券</span>
+                  <a href="" class="link-btn">查看</a>
+                </li>
+                <li class="item">
+                  <a class="value">12</a>
+                  <i class="iconfont icon-score"></i>
+                  <span class="label">积分</span>
+                  <a href="" class="link-btn">有什么用？</a>
+                </li>
+                <li class="item">
+                  <a class="value" href="wallet.html">519.95</a>
+                  <i class="iconfont icon-balance"></i>
+                  <span class="label">余额</span>
+                  <a href="recharge.html" class="link-btn">充值</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--订单状态-->
+          <div class="box3 ">
+            <div class="title">
+              <i class="iconfont icon-receipt"></i><span>我的订单</span>
+              <a href="myOrder.html" class="btn--txt fr">查看所有</a>
+            </div>
+            <div class="status" id="order">
+              <ul class="cl">
+                <li>
+                  <a>
+                    <i class="iconfont icon-payment"></i><span>待付款</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    ><i class="iconfont icon-receipt"></i><span>待收货</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    ><i class="iconfont icon-refund"></i
+                    ><span>售后/退款</span></a
+                  >
+                </li>
+                <li>
+                  <a>
+                    <i class="iconfont icon-all-order"></i
+                    ><span>全部订单</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    ><i class="iconfont icon-opinion"></i
+                    ><span>意见反馈</span></a
+                  >
+                </li>
+              </ul>
+              <div class="order">
+                <div class="item cl">
+                  <div class="img fl">
+                    <img src="https://dummyimage.com/68x68/000/fff" alt="" />
+                  </div>
+                  <div class="content fl">
+                    <h3>[广州] [广州市南区益丰揽投部]安排投递,投递局阿！</h3>
+                    <div class="desc">普通快递I 2019-02-21 08:33:35</div>
+                    <div class="trigger">
+                      <a href="" class="btn--txt">查看详情</a>
+                      <a href="" class="btn--txt">物流跟踪</a>
+                    </div>
+                  </div>
+                  <a href="" class="btn--red btn btn-confirm">确认收货</a>
+                </div>
+                <div class="item cl">
+                  <div class="img fl">
+                    <img src="https://dummyimage.com/68x68/000/fff" alt="" />
+                  </div>
+                  <div class="content fl">
+                    <h3>[广州] [广州市南区益丰揽投部]安排投递,投递局阿！</h3>
+                    <div class="desc">普通快递I 2019-02-21 08:33:35</div>
+                  </div>
+                  <a href="" class="btn--red btn btn-confirm">查看详情</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+  </body>
+</html>

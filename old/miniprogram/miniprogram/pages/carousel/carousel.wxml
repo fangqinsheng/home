@@ -1,0 +1,54 @@
+<!--pages/carousel/carousel.wxml-->
+<view class="page" bindtouchstart='touchStart' bindtouchend="touchEnd" bindtouchmove="touchMove">
+  <!-- 画册 -->
+  <view wx:for="{{ gallery }}" class="gallery" >
+    <image src="{{ item.show ? item.url : '' }}" style="width: {{ scaleWidth }}px; height: {{ scaleHeight }}px;" mode="aspectFit" bindtap="imgPreview" data-src="{{ item.show ? item.url : '' }}" />
+  </view>
+
+  <!-- 引导页 -->
+  <view class="guide" wx:if="{{ guide == true }}">
+    <text class="first {{ first ? 'hide' : 'show' }}" bindtap="next">右滑呼出菜单栏</text>
+    <text class="second {{ second ? 'show' : 'hide' }}" bindtap="last">上下滑动浏览产品页面</text>
+  </view>
+</view>
+
+<view class="scaleImage" wx:if="{{scaleImage}}" catchtouchmove="true">
+  <image 
+    class="img" 
+    src="{{ scaleImage }}"  
+    style="width: {{width}}rpx; height: {{height}}rpx; left: {{left}}rpx; top: {{top}}rpx; transform: translate(-50%, -50%) scale({{ scale }}) rotate({{ rotate }}deg);" 
+    bindload="bindload"
+    bind:touchstart="scaleStart"
+    bind:touchmove="scaleMove"
+    bind:touchend="scaleEnd"
+    bindtap="closePreview">
+  </image>
+</view>
+
+<!-- 侧边栏 -->
+<view class="aside" catchtouchmove="true" wx:if="{{ open }}">
+  <view class="mask {{ open ? 'show' : 'hide' }}" bindtap="closeAside"></view>
+  <view class="modal {{ open ? 'active' : '' }}">
+    <scroll-view class="box" scroll-y="true">
+      <view wx:for="{{aside}}" id='{{item.id}}'  class="wc" bindtap="scroll">
+        <text class="iconfont icon-tips range">{{ item.range }}</text>
+        <text class="iconfont icon-arrow txt">{{ item.name }}</text>
+      </view> 
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 半屏弹框 -->
+<view class="dialog__wrapper" wx:if="{{ modal == true }}"  catchtouchmove="true">
+  <view class="mask"></view>
+  <view class="dialog">
+    <view class="title">{{ dialog.title }}</view>
+    <view class="description">
+      <text class="greeting">尊敬的用户，您好:</text>
+      <text class="txt">{{ dialog.description }}</text>
+    </view>
+    <view class="btn">
+      <button bind:tap="navigate">{{ dialog.btn }}</button>
+    </view>
+  </view>
+</view>

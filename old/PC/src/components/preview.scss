@@ -1,0 +1,57 @@
+//demo
+.ui-preview {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  &:after {
+    content: "Demo";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    border-radius: 4px 0 4px 0;
+  }
+}
+
+.Mui {
+
+  &-aside {
+    float: left;
+    width: 200px;
+  }
+  &-main {
+    margin-left: 200px;
+    .inner {
+      padding: 20px;
+    }
+  }
+}
+
+#demo {
+  .info {
+    padding: 0;
+    ul {
+      li {
+        a {
+          border: 1px solid #ededed;
+          padding: 10px 15px 10px 42px;
+          display: block;
+          cursor: pointer;
+          color: #4d4d4d;
+          background: #4a90e2;
+          background: #f5f5f5;
+          position: relative;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.blog {
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #fff;
+  border-top: 2px solid #0d64b1;
+  &-info {
+    span {
+      height: 20px;
+      line-height: 20px;
+      color: #aaa;
+      padding-right: 30px;
+      vertical-align: middle;
+    }
+    i { vertical-align: middle; padding-right: 6px;}
+  }
+  &-title {
+    padding-top: 54px;
+    margin-bottom: 16px;
+    h3 {
+      height: 36px;
+      line-height: 30px;
+      max-width: 865px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #222;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-content {
+    &--txt {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #000;
+    }
+
+    &--pic {
+
+      width: 100%;
+      border: 1px solid #e9ecef;
+      margin-bottom: 30px;
+      background-color: #f6f6f6;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  //标签
+  &-tag {
+    float: left;
+    i,a {
+      color: #0d64b1;
+    }
+  }
+
+  &-toolbar {
+    .share-btn {
+      float: left;
+      margin-left: 40px;
+    }
+  }
+  //上下翻页按钮
+  &-opt {
+    padding: 10px 0 20px 0;
+    a {
+      &:hover {
+        color: #d0021b;
+      }
+    }
+  }
+}

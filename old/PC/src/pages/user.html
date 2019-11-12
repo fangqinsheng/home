@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="个人中心"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <section class="admin">
+      <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <template src="admin/user.html"></template>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+    <script type="text/javascript">
+      $("#user").tab({
+          index:0
+        });
+        var dragImgUpload = new DragImgUpload("#upload",{
+            callback:function (files) {
+                //回调函数，可以传递给后台等等
+                var file = files[0];
+                console.log(file.name);
+            }
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+// 思源标准
+@font-face {
+  font-family: "SiYuan";
+  src: url("../font/SourceHanSansCN-Regular.woff2") format("woff2"),
+  url("../font/SourceHanSansCN-Regular.woff") format("woff"),
+  url("../font/SourceHanSansCN-Regular.ttf") format("truetype"),
+  url("../font/SourceHanSansCN-Regular.eot") format("embedded-opentype"),
+  url("../font/SourceHanSansCN-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/************************ body **************************************/
+body {
+  font: 14px/1.6 SiYuan, sans-serif, arial, din,  PingFangSC;
+  -webkit-font-smoothing: antialiased; //有点多余
+  color: #666;
+  background-color: #f4f4f4;
+}
+/************************ body **************************************/
+a {
+  color: #666;
+  text-decoration: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+
+/******************************** 排列布局 *************************************/
+.col {
+  float: left;
+}
+
+.row { width: 100%; }
+
+//外包裹容器
+.w {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.paragraph {
+  img { display: block; width: 100%; }
+}
+//居中容器
+.container {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//ls => layout-small
+.ls .container {
+  width: 970px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+//颜色
+.txt-tan {
+  color: #8b572a;
+}
+
+.hide { display: none; }
+
+.span { display: inline-block; }
+
+.txt-l {
+  text-align: left;
+}
+
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.m10 {
+  margin: 0 10px;
+}
+
+.m20 {
+  margin: 0 20px;
+}
+
+.p30 {
+  padding: 30px 0;
+}
+
+.p20 {
+  padding: 20px 0;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.cl {
+  zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+  }
+}
+/**************************  字体大小  **********************************/
+.fs-16 { font-size: 16px; }
+.fs-20 { font-size: 20px; }
+
+//placeholder 颜色和大小
+input::-webkit-input-placeholder {
+  color: #999;
+}
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+  color: #999;
+}
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+  color: #999;
+}
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  color: #999;
+}
+
+/******************* 滚动条颜色 *************************
+********************************************************
+*******************************************************/
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #cecece;
+  -webkit-box-shadow: #cecece;
+}

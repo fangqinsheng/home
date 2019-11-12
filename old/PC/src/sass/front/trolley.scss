@@ -1,0 +1,311 @@
+/**********************  购物车页面  ****************************/
+.trolley {
+  padding: 30px 0 50px 0;
+  &-box {
+
+  }
+
+  &-toolbar {
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    overflow: hidden;
+
+    .toolbar-left {
+      float: left;
+    }
+    .toolbar-right {
+      float: right;
+    }
+
+    .select-all {
+      float: left;
+      padding: 16px 0 16px 9px;
+      line-height: 18px;
+      height: 18px;
+      *width: 60px;
+      white-space: nowrap;
+      input {
+        vertical-align: middle;
+      }
+    }
+
+    .other-operation {
+      float: left;
+      height: 50px;
+      margin-left: 12px;
+      line-height: 50px;
+      width: 260px;
+      a {
+        margin-right: 8px;
+      }
+    }
+
+    .amount-sum,
+    .price-sum,
+    .toolbar-btn {
+      float: right;
+    }
+
+    .toolbar-btn {
+      background-color: #f20014;
+      color: #fff;
+      cursor: pointer;
+      &.disabled {
+        background-color: #6c6c6c;
+        cursor: auto;
+      }
+      a {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        font-family: "Microsoft YaHei";
+        width: 94px;
+        height: 52px;
+        line-height: 52px;
+        background-color: inherit;
+        color: inherit;
+        cursor: inherit;
+      }
+    }
+
+    .price-sum,
+    .amount-sum {
+      text-align: right;
+      line-height: 20px;
+      margin-right: 10px;
+      margin-top: 8px;
+      color: #666;
+      em {
+        color: #f20014;
+      }
+    }
+    .price-sum em {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .price-sum a {
+      display: block;
+      &:hover {
+        color: #d0021b;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/********************** 添加购物车 ****************************/
+.addTrolley {
+  position: relative;
+  .container {
+    position: relative;
+  }
+  &-title {
+    padding: 10px 0;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      font-size: 18px;
+      vertical-align: middle;
+      color: #02af00;
+    }
+  }
+  &-product {
+    overflow: hidden;
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+    .p-img {
+      float: left;
+    }
+    .p-txt {
+      float: left;
+      margin-left: 16px;
+    }
+    .p-title {
+      font-size: 14px;
+    }
+    .p-spec {
+      color: #c6c6c8;
+    }
+  }
+  &-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    a {
+      margin-left: 10px;
+      padding: 8px 24px;
+      font-size: 14px;
+      display: inline-block;
+      line-height: 20px;
+    }
+    .bg-red {
+      &:after {
+        content: '\e612';
+      }
+    }
+  }
+}
+/********************** slider猜你喜欢 ****************************/
+.rec {
+  background-color: #fff;
+  padding: 30px 0;
+  //标题
+  &-title {
+    margin-bottom: 40px;
+    span {
+      font: 700 15px/20px "Microsoft YaHei";
+      padding: 8px 0;
+      display: inline-block;
+      border-bottom: 2px solid #d0021b;
+    }
+  }
+  //轮播
+  &-slider {
+    //箭头
+    &:hover {
+      .slick-prev,
+      .slick-next {
+        visibility: initial;
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      visibility: hidden;
+      height: 70px;
+      background-color: #e3e3e3;
+      &:before {
+        color: #fff;
+      }
+      &:hover {
+        background-color: #cccccc;
+      }
+    }
+    //左箭头
+    .slick-prev {
+      left: 1px;
+    }
+    //右箭头
+    .slick-next {
+      right: 1px;
+    }
+    //点
+    .slick-dots {
+      top: -60px;
+      bottom: unset;
+      right: 0;
+      text-align: right;
+      width: auto;
+      li {
+        width: 10px;
+        height: 10px;
+      }
+      button {
+        position: relative;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        background-color: #A1A1A1;
+        border-radius: 50%;
+        behavior: url(assets/PIE.htc);
+        &:before {
+          content: '';
+        }
+      }
+      li.slick-active {
+        width: 30px;
+        button {
+          background-color: #d0021b;
+          border-radius: 6px;
+          width: 30px;
+        }
+      }
+    }
+    //每一行
+    .row {
+      display: block;
+      overflow: hidden;
+      zoom: 1;
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+      }
+    }
+    .col {
+      position: relative;
+      width: 1164/5 + px;
+      margin-top: 1px;
+      border: 1px dashed #cacaca;
+      margin-left: -1px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        z-index: 2;
+        border: 1px solid #d0021b;
+      }
+    }
+    //商品
+    .item {
+      position: relative;
+      padding: 20px;
+      background: #fff;
+      overflow: hidden;
+      //商品图片
+      .p-img {
+        width: 160px;
+        margin: 0 auto;
+      }
+      //商品名
+      .p-name {
+        margin: 5px 0;
+        overflow: hidden;
+        height: 40px;
+        line-height: 20px;
+      }
+      //商品价格
+      .p-price {
+        font-size: 18px;
+        color: #d0021b;
+        padding: 4px 0;
+        text-align: center;
+      }
+      //加入进货单
+      .p-btn {
+        text-align: center;
+        margin-top: 10px;
+        a {
+          display: inline-block;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 24px;
+          border: 1px solid #9b9b9b;
+          border-radius: 16px;
+          &:hover {
+            border-color: #d0021b;
+            background-color: #d0021b;
+            color: #fff;
+          }
+        }
+        i {
+          font-size: 16px;
+          margin-top: -1px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

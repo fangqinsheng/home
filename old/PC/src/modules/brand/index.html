@@ -1,0 +1,166 @@
+<!--header begin-->
+<div class="header">
+    <div class="container">
+        <h1 class="site-logo">
+            <a href="#">
+                <img src="img/logo.png" alt="惠而信商用设备有限公司" width="230px" />
+            </a>
+        </h1>
+
+
+        {{ if search }}
+        <div class="fr mt30">
+            <div class="settleup">
+                <!--购物车按钮-->
+                <div class="trolley-btn">
+                    <div class="icon">
+                        <i class="iconfont icon-trolley"></i>
+                        <em>0</em>
+                    </div>
+                    <span class="txt">我的进货单</span>
+                    <b class="iconfont icon-triangle-down"></b>
+                </div>
+                <!--未登录前-->
+                <div class="trolley-content">
+                    <div class="spacer"></div>
+                    <div class="empty">
+                        您还未登录！<a rel="nofollow" class="txt-blue" href="javascript:login();">马上登录</a>查看进货单吧
+                    </div>
+                </div>
+                <!--登录后-->
+                <div class="trolley-content">
+                    <div class="spacer"></div>
+                    <div class="settleup-box">
+                        <!--标题-->
+                        <h3 class="settleup-title">最新加入的商品</h3>
+                        <!--内容-->
+                        <div class="settleup-content">
+                            <ul>
+                                <li class="item cl">
+                                    <div class="p-img fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">
+                                            <img src="https://dummyimage.com/50x50/000/fff" alt="50x50" width="50" height="50">
+                                        </a>
+                                    </div>
+                                    <div class="p-name fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">惠而信Welshine 0273保鲜盒 普通保鲜盒 不透明 正方形</a>
+                                    </div>
+                                    <div class="p-details fl">
+                            <span class="p-price">
+                                <strong>￥39.00</strong>x1
+                            </span>
+                                        <a href="" class="g-delete">删除</a>
+                                    </div>
+                                </li>
+                                <li class="item cl">
+                                    <div class="p-img fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">
+                                            <img src="https://dummyimage.com/50x50/000/fff" alt="50x50" width="50" height="50">
+                                        </a>
+                                    </div>
+                                    <div class="p-name fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">惠而信Welshine 0273保鲜盒 普通保鲜盒 不透明 正方形</a>
+                                    </div>
+                                    <div class="p-details fl">
+                            <span class="p-price">
+                                <strong>￥39.00</strong>x1
+                            </span>
+                                        <a href="" class="g-delete">删除</a>
+                                    </div>
+                                </li>
+                                <li class="item cl">
+                                    <div class="p-img fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">
+                                            <img src="https://dummyimage.com/50x50/000/fff" alt="50x50" width="50" height="50">
+                                        </a>
+                                    </div>
+                                    <div class="p-name fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">惠而信Welshine 0273保鲜盒 普通保鲜盒 不透明 正方形</a>
+                                    </div>
+                                    <div class="p-details fl">
+                            <span class="p-price">
+                                <strong>￥39.00</strong>x1
+                            </span>
+                                        <a href="" class="g-delete">删除</a>
+                                    </div>
+                                </li>
+                                <li class="item cl">
+                                    <div class="p-img fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">
+                                            <img src="https://dummyimage.com/50x50/000/fff" alt="50x50" width="50" height="50">
+                                        </a>
+                                    </div>
+                                    <div class="p-name fl">
+                                        <a href="https://dummyimage.com/50x50/000/fff">惠而信Welshine 0273保鲜盒 普通保鲜盒 不透明 正方形</a>
+                                    </div>
+                                    <div class="p-details fl">
+                            <span class="p-price">
+                                <strong>￥39.00</strong>x1
+                            </span>
+                                        <a href="" class="g-delete">删除</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--按钮-->
+                        <div class="settleup-opt cl">
+                            <div class="fl">
+                                共<em>4</em>件商品，共计<em>215.00</em>
+                            </div>
+                            <div class="fr">
+                                <a href="" class="btn-primary">去购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-box__wrapper">
+                <div class="search-box">
+                    <i class="iconfont icon-search"></i>
+                    <input class="input-txt radius" type="text" title="" placeholder="搜索商品名称" />
+                    <button type="button" class="btn btn-primary radius">搜索</button>
+                </div>
+                <div class="quick-links">
+                    <dl>
+                        <dt>热门搜索：</dt>
+                        <dd>
+                            <a href="">后厨用品</a>
+                            <a href="">后厨用品</a>
+                            <a href="">后厨用品</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+        {{ /if }}
+
+
+        {{ if collect }}
+        <div class="collect-btn">
+            <a href="javascript: void(0);" title="收藏本站" onclick="addCollect('H-ui前端框架','http://www.h-ui.net/');">收藏惠而信</a>
+        </div>
+        {{ /if }}
+
+        {{ if step }}
+        <div class="step fr">
+            <dl class="done">
+                <dt>1</dt>
+                <dd>1.我的购物车</dd>
+            </dl>
+            <dl class="done">
+                <dt>2</dt>
+                <dd>2.填写核对订单信息</dd>
+            </dl>
+            <dl class="doing">
+                <dt>3</dt>
+                <dd>3.提交成功</dd>
+            </dl>
+        </div>
+        {{ /if }}
+
+
+    </div>
+</div>
+<!--header end-->

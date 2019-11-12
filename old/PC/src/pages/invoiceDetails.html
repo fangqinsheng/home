@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<template src="common/head.html" title="发票详情"></template>
+<body>
+<template src="common/shortcut.html"></template>
+
+<template src="common/header.html"></template>
+
+<section class="admin">
+    <div class="container">
+        <template src="aside/index.html"></template>
+
+        <section class="admin-main">
+            <h2 class="hd">
+                <i class="iconfont icon-email"></i><span>发票详情</span>
+            </h2>
+
+            <div class="bd">
+                <div class="invoice-details">
+
+                    <table class="i-status">
+                        <thead>
+                        <tr>
+                            <th colspan="2">
+                                <h3 class="invoice-details--title">发票信息 订单号：84908346136</h3>
+                                <!-- 需要获取的订单号 -->
+                                <input type="hidden" value="">
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>发票类型</td>
+                            <td>电子普通发票</td>
+                        </tr>
+                        <tr>
+                            <td>发票内容</td>
+                            <td>商品明细</td>
+                        </tr>
+                        <tr>
+                            <td>发票抬头</td>
+                            <td>个人</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="i-info">
+                        <thead>
+                        <tr>
+                            <th>发票代码</th>
+                            <th>发票号码</th>
+                            <th>微信扫码获取电子普通发票</th>
+                            <th>下载电子普通发票</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>044001800311</td>
+                            <td>73292740</td>
+                            <td>
+                                <img src="https://dummyimage.com/70x70/000/fff" alt="电子发票" width="70" height="70">
+                            </td>
+                            <td>
+                                <a href="assets/1.pdf" target="_blank" class="invoice-download">下载电子发票</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<template src="common/footer.html"></template>
+</body>
+</html>

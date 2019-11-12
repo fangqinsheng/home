@@ -1,0 +1,139 @@
+.fx-cate {
+  border-top: 2px solid #4A90E2;
+  //头部导航
+  .tabBar {
+    margin-bottom: 10px;
+    background-color: #fff;
+    zoom: 1;
+    overflow: visible;
+    &:after {
+      clear: both;
+      display: block;
+      content: "";
+      height: 0;
+      visibility: hidden;
+    }
+    span {
+      position: relative;
+      float: left;
+      height: 39px;
+      padding-right: 20px;
+      max-width: 64px;
+      line-height: 38px;
+      font-size: 14px;
+      text-align: center;
+      i {
+        display: none;
+        position: absolute;
+        z-index: 22;
+        left: 50%;
+        margin-left: -6px;
+        bottom: -6px;
+        height: 0;
+        width: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #4A90E2;
+      }
+      &.current i { display: block; }
+    }
+  }
+  //a {
+  //  display: inline-block;
+  //  height: 38px;
+  //  width: 56px;
+  //  text-align: center;
+  //  overflow: hidden;
+//  a {
+//          color: #4A90E2;
+//          border-bottom: 1px solid #4A90E2;
+
+  // 主要内容
+  .tabCon {
+    ul {
+      li {
+        zoom: 1;
+        overflow: hidden;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 20px;
+        background-color: #fff;
+        &:after {
+          clear: both;
+          display: block;
+          content: "";
+          height: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &--content {
+    zoom: 1;
+    overflow: hidden;
+    &:after {
+      clear: both;
+      display: block;
+      content: "";
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+  &--pic {
+    float: left;
+  }
+
+  &--info {
+    position: relative;
+    float: left;
+    margin-left: 34px;
+    width: 870px;
+    height: 120px;
+  }
+  //标题
+  &--title {
+    font: 700 16px/40px "Microsoft YaHei";
+    //margin-bottom: 10px;
+  }
+  //描述
+  &--desc {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &--opt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    span {
+      line-height: 30px;
+    }
+  }
+  //按钮
+  &--btn {
+    margin-left: 10px;
+    border: 1px solid #4A90E2;
+    color: #4A90E2;
+    background-color: #fff;
+    padding: 6px 16px;
+    transition: all 0.28s ease-in-out;
+    border-radius: 3px;
+    &:hover {
+      background-color: #4A90E2;
+      color: #fff;
+    }
+  }
+  //阅读量
+  &--num {
+    i { vertical-align: middle; }
+  }
+  //发布时间
+  &--deate {
+    color: #A1A1A1;
+  }
+}

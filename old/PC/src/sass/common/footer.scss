@@ -1,0 +1,104 @@
+/*************************************************************************
+*************************** footer脚注 ***********************************
+*************************************************************************/
+.footer {
+  background: #f4f4f4;
+  .slogan {
+    text-align: center;
+    padding: 20px 0;
+    .item {
+      float: left;
+      width: (1170/4) + px;
+    }
+    .icon {
+      line-height: 46px;
+      i {
+        color: #005abc;
+        font-size: 40px;
+        vertical-align: middle;
+      }
+      display: inline-block;
+    }
+    .txt {
+      display: inline-block;
+      margin-left: 15px;
+      vertical-align: top;
+      text-align: left;
+      line-height: 1.5;
+      color: rgb(60, 60, 60);
+      dt {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      dd {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .help {
+    border-bottom: 1px solid rgb(227, 227, 230);
+    padding: 30px 0;
+    border-top: 1px solid rgb(227, 227, 230);
+    .map {
+      border-right: 1px solid rgb(245, 245, 245);
+      box-sizing: border-box;
+      text-align: center;
+      dl {
+        float: left;
+        width: (758/5) + px;
+      }
+      dt {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      dd {
+        margin-bottom: 5px;
+      }
+    }
+    .contact {
+      float: left;
+      padding: 0 30px;
+      text-align: center;
+      .tel {
+        font-size: 22px;
+      }
+      .desc {
+        font-size: 15px;
+      }
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        height: 20px;
+        padding: 10px 0;
+        background: #005abc;
+        display: inline-block;
+        width: 170px;
+        border-radius: 30px;
+        position: relative;
+        z-index: 2;
+        behavior: url(assets/PIE.htc);
+        color: #fff;
+        margin-top: 4px;
+        i {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+    .code {
+      float: left;
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .copy-right {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+}

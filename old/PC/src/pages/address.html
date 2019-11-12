@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="收货地址"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <template src="common/nav.html"></template>
+
+    <section class="admin">
+      <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <section class="admin-main">
+          <div class="hd">
+            <input type="button" title="" class="btn btn-danger" value="新增收货地址" onclick="addNewAddress()">
+            您已创建<em>3</em>个收货地址，最多可创建<em>20</em>个
+          </div>
+
+          <div class="bd">
+            <div class="address">
+              <ul>
+                <li>
+                  <div class="inner">
+                    <a href="" class="handle-close">
+                      <i class="iconfont icon-close"></i>
+                    </a>
+                    <div class="address-opt">
+                      <a href="javascript: void(0);" class="btn--txt handle-edit" onclick="editAddress()">编辑</a>
+                    </div>
+                    <dl class="alias">
+                      <dt>公司</dt>
+                      <dd>默认地址</dd>
+                    </dl>
+                    <dl>
+                      <dt>收货人：</dt>
+                      <dd>林美辰</dd>
+                    </dl>
+                    <dl>
+                      <dt>所在地区：</dt>
+                      <dd>广东省广州市海珠区</dd>
+                    </dl>
+                    <dl>
+                      <dt>地址：</dt>
+                      <dd>石溪村东碧花苑A栋</dd>
+                    </dl>
+                    <dl>
+                      <dt>手机：</dt>
+                      <dd>166201590554</dd>
+                    </dl>
+                    <dl>
+                      <dt>固定电话：</dt>
+                      <dd>5590159</dd>
+                    </dl>
+                    <dl>
+                      <dt>电子邮箱：</dt>
+                      <dd>779867279@qq.com</dd>
+                    </dl>
+                  </div>
+                </li>
+                <li>
+                  <div class="inner">
+                    <a href="" class="handle-close">
+                      <i class="iconfont icon-close"></i>
+                    </a>
+                    <div class="address-opt">
+                      <a href="javascript: void(0);" class="btn--txt handle-edit" onclick="setDefaultAddress()">设为默认地址</a>
+                      <a href="javascript: void(0);" class="btn--txt handle-edit" onclick="editAddress()">编辑</a>
+                    </div>
+                    <dl class="alias">
+                      <dt>公司</dt>
+                    </dl>
+                    <dl>
+                      <dt>收货人：</dt>
+                      <dd>林美辰</dd>
+                    </dl>
+                    <dl>
+                      <dt>所在地区：</dt>
+                      <dd>广东省广州市海珠区</dd>
+                    </dl>
+                    <dl>
+                      <dt>地址：</dt>
+                      <dd>石溪村东碧花苑A栋</dd>
+                    </dl>
+                    <dl>
+                      <dt>手机：</dt>
+                      <dd>166201590554</dd>
+                    </dl>
+                    <dl>
+                      <dt>固定电话：</dt>
+                      <dd>5590159</dd>
+                    </dl>
+                    <dl>
+                      <dt>电子邮箱：</dt>
+                      <dd>779867279@qq.com</dd>
+                    </dl>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+    <script src="js/address.js"></script>
+  </body>
+</html>

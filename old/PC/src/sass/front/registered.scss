@@ -1,0 +1,183 @@
+// 注册
+.register {
+  position: relative;
+  background: #fff;
+  height: 650px;
+  //注册框
+  &-box {
+    overflow: hidden;
+    width: 100%;
+    padding: 30px 0;
+    background: url("../img/login/bg.jpg") no-repeat;
+    background-size: cover;
+  }
+  //居中容器
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    margin-top: -300px;
+  }
+}
+//注册表单
+.register-form {
+  //每一行
+  .item {
+    margin-top: 20px;
+  }
+  //标头
+  .label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-size: 14px;
+  }
+  //值
+  .value {
+    display: inline-block;
+    position: relative;
+    width: 320px;
+    margin-left: 10px;
+  }
+  //输入框
+  .input-txt { height: 40px; }
+  //错误信息
+  .error-msg {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 12px;
+    color: #d0021b;
+  }
+  //覆盖框
+  .cover {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #4a90e2;
+    font-size: 14px;
+    border: 1px solid #4a90e2;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 10px;
+  }
+  //按钮
+  .btn {
+    width: 230px;
+    border-radius: 0;
+  }
+  //标题
+  .title {
+    font-size: 36px;
+    color: #1aad19;
+    line-height: 58px;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      background: url("../../img/icon/success.png");
+      width: 58px;
+      height: 58px;
+    }
+    span {
+      vertical-align: middle;
+      margin-left: 30px;
+    }
+  }
+}
+// 个人信息
+.user-info {
+
+  .hd {
+    width: 100%;
+    ul li {
+      float: left;
+      line-height: 36px;
+      width: 50%;
+      padding: 5px 30px;
+      border-bottom: 2px solid #c6c6c8;
+      box-sizing: border-box;
+      i {
+        font-size: 18px;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        background: #c6c6c8;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        behavior: url(assets/PIE.htc);
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        font-size: 18px;
+        color: #c6c6c8;
+        font-weight: 600;
+      }
+      &.on {
+        border-color: #4a90e2;
+        i {
+          background: #4a90e2;
+        }
+        span {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+// 企业信息
+.company-info {
+  width: 710px;
+  margin: 0 auto;
+  // 标题
+  .title {
+    font-size: 36px;
+    color: #1aad19;
+    line-height: 58px;
+    text-align: center;
+    margin-top: 45px;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      background: url("../../img/icon/success.png");
+      width: 58px;
+      height: 58px;
+    }
+    span {
+      vertical-align: middle;
+      margin-left: 30px;
+    }
+  }
+  // 描述
+  .desc {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+    em {
+      font-weight: 600;
+    }
+  }
+  // 提示
+  .tips {
+    font-size: 16px;
+    margin: 20px 0;
+    text-align: center;
+    a {
+      color: #d0021b;
+    }
+  }
+  // 内容
+  .content {
+    width: 500px;
+    margin: 0 auto;
+  }
+}

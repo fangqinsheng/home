@@ -1,0 +1,163 @@
+<!--购物车-->
+<section class="order">
+    <div class="container">
+        <!--购物车-->
+        <div class="order-box">
+            <div class="order-header">
+                <div class="column t-checkbox">
+                    <input type="checkbox" class="all_check" title="" />全选
+                </div>
+                <div class="column t-name">商品</div>
+                <div class="column t-spec">规格</div>
+                <div class="column t-price">含税单价</div>
+                <div class="column t-num">数量</div>
+                <div class="column t-sum">小计</div>
+                <div class="column t-operate">操作</div>
+            </div>
+            <br />
+            <div class="order-list">
+                <div class="item is-selected">
+                    <div class="cell g-checkbox">
+                        <input
+                                type="checkbox"
+                                checked
+                                class="single_check"
+                                autocomplete="off"
+                                title=""
+                        />
+                    </div>
+
+                    <div class="cell g-item">
+                        <div class="g-img">
+                            <a href="https://dummyimage.com/80x80/000/fff"
+                            ><img
+                                    src="https://dummyimage.com/80x80/000/fff"
+                                    alt="0225半透明标示盒"
+                                    width="80"
+                                    height="80"
+                            /></a>
+                        </div>
+
+                        <dl class="g-name">
+                            <dt>
+                                惠而信Welshine 0266 PP带密封圈标示盒储存盒 半透明盒子
+                                分色管理6套装
+                            </dt>
+                        </dl>
+                    </div>
+
+                    <div class="cell g-spec">
+                        <!-- 循环输出选项 -->
+                        <div class="props-txt" data-t="{{ props }}">颜色：蓝色</div>
+                        <div class="props-txt" data-t="{{ props }}">材质：PC</div>
+                    </div>
+
+                    <div class="cell g-price">
+                        <strong class="single-price">￥ 1119.11</strong>
+                    </div>
+
+                    <div class="cell g-amount">
+                        <div class="g-amount__box">
+                            <a href="javascript:void(0);" class="reduce disabled">-</a>
+                            <input class="num" type="text" value="1" />
+                            <a href="javascript:void(0);" class="add">+</a>
+                        </div>
+                    </div>
+
+                    <div class="cell g-sum">
+                        <strong class="sum-price">￥1119.11</strong>
+                    </div>
+
+                    <div class="cell g-operate">
+                        <a href="javascript:void(0);" class="del-btn">删除</a>
+                        <a href="">添加收藏</a>
+                    </div>
+                </div>
+                <div class="item is-selected">
+                    <div class="cell g-checkbox">
+                        <input
+                                type="checkbox"
+                                checked
+                                class="single_check"
+                                autocomplete="off"
+                                title=""
+                        />
+                    </div>
+
+                    <div class="cell g-item">
+                        <div class="g-img">
+                            <a href="https://dummyimage.com/80x80/000/fff"
+                            ><img
+                                    src="https://dummyimage.com/80x80/000/fff"
+                                    alt="0225半透明标示盒"
+                                    width="80"
+                                    height="80"
+                            /></a>
+                        </div>
+
+                        <dl class="g-name">
+                            <dt>
+                                惠而信Welshine 0266 PP带密封圈标示盒储存盒 半透明盒子
+                                分色管理6套装
+                            </dt>
+                        </dl>
+                    </div>
+
+                    <div class="cell g-spec">
+                        <!-- 循环输出选项 -->
+                        <div class="props-txt" data-t="{{ props }}">颜色：蓝色</div>
+                        <div class="props-txt" data-t="{{ props }}">材质：PC</div>
+                    </div>
+
+                    <div class="cell g-price">
+                        <strong class="single-price">￥ 1119.11</strong>
+                    </div>
+
+                    <div class="cell g-amount">
+                        <div class="g-amount__box">
+                            <a href="javascript:void(0);" class="reduce disabled">-</a>
+                            <input class="num" type="text" value="1" />
+                            <a href="javascript:void(0);" class="add">+</a>
+                        </div>
+                    </div>
+
+                    <div class="cell g-sum">
+                        <strong class="sum-price">￥1119.11</strong>
+                    </div>
+
+                    <div class="cell g-operate">
+                        <a href="javascript:void(0);" class="del-btn">删除</a>
+                        <a href="">添加收藏</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-toolbar">
+                <div class="toolbar-left">
+                    <div class="select-all">
+                        <input type="checkbox" class="all_check" /> 全选
+                    </div>
+                    <div class="other-operation">
+                        <a href="" class="a a__primary">删除选中的商品</a>
+                        <a href="" class="a a__primary">添加到收藏夹</a>
+                    </div>
+                </div>
+
+                <div class="toolbar-right">
+                    <div class="toolbar-btn disabled">
+                        <a href="">去结算</a>
+                    </div>
+
+                    <div class="price-sum">
+                        <span>总价（不含运费）： <em class="sum">0.00</em></span>
+                        <a href="javascript:history.go(-1)">返回继续购物</a>
+                    </div>
+
+                    <div class="amount-sum">
+                        <span>已选择 <em>0</em>件商品 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

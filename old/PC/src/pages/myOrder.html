@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="订单状态"></template>
+  <body>
+    <template src="common/shortcut.html"></template>
+
+    <template src="common/header.html"></template>
+
+    <section class="admin">
+      <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <section class="admin-main tab" id="myOrder">
+          <div class="hd">
+            <div class="tabBar cl">
+              <span>所有订单</span>
+              <span>待付款<em>0</em></span>
+              <span>待发款<em>2</em></span>
+              <span>待收货<em>3</em></span>
+              <span>完结订单<em>4</em></span>
+              <span>无效订单<em>1</em></span>
+            </div>
+            <div class="filter-box cl">
+              <select name="date" title="">
+                <option value="0">全部订单</option>
+                <option value="1">近一周订单</option>
+                <option value="2">近一个月订单</option>
+                <option value="3">近三个月订单</option>
+                <option value="4">近一年订单</option>
+              </select>
+              <button>
+                <i class="iconfont icon-search"></i>
+              </button>
+              <input type="text" title="" />
+            </div>
+          </div>
+          <div class="bd">
+            <div class="tabCon">
+              <template
+                      src="admin/order.html"
+                      payment
+                      send
+                      receive
+                      finished
+                      saled
+              ></template>
+            </div>
+            <div class="tabCon">
+              <template src="admin/order.html" payment></template>
+            </div>
+            <div class="tabCon">
+              <template src="admin/order.html" send></template>
+            </div>
+            <div class="tabCon">
+              <template src="admin/order.html" receive></template>
+            </div>
+            <div class="tabCon">
+              <template src="admin/order.html" finished></template>
+            </div>
+            <div class="tabCon">
+              <template src="admin/order.html" saled></template>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+  </body>
+</html>

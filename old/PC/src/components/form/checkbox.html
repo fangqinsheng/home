@@ -1,0 +1,19 @@
+{{ if default }}
+<label class="checkbox">
+    <span class="checkbox__input">
+        <span class="checkbox__inner"></span>
+         <input  class="checkbox__original" type="checkbox" aria-hidden="false">
+    </span>
+    <span class="checkbox__label">{{ txt }}</span>
+</label>
+{{ /if }}
+
+{{ if checked }}
+<label class="checkbox">
+    <span class="checkbox__input is-checked">
+        <span class="checkbox__inner"></span>
+         <input  class="checkbox__original" type="checkbox" aria-hidden="false">
+    </span>
+    <span class="checkbox__label">{{ txt }}</span>
+</label>
+{{ /if }}

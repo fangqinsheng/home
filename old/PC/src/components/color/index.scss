@@ -1,0 +1,25 @@
+@import "../variable";
+
+@mixin bg($bg, $border, $color) {
+  background-color: $bg;
+  border: 1px solid $border;
+  color: $color;
+}
+
+/**************************  文字颜色  **********************************/
+.txt-red { color: $secondary-color; }          //红色
+.txt-blue { color: $primary-color; }           //蓝色
+/**************************  背景颜色  **********************************/
+.bg-default { @include bg($bg-white, $placeholder-txt, $primary-txt); }     // 默认
+.bg-blue { @include bg($primary-color, $primary-color, $bg-white); }           // 蓝色
+.bg-red { @include bg($secondary-color, $secondary-color, $bg-white); }
+.bg-info { @include bg($info-color, $info-color, $bg-white); }
+
+
+.bg-white {}
+.bg-grey {}
+.bg-brown {}
+.bg-black {}
+.bg-wineRed {}
+.bg-orange {}
+.bg-blue {}

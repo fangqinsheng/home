@@ -1,0 +1,65 @@
+/*************************************************************/
+.account-message {
+  background: #f8f7fa;
+  .title {
+    margin: 20px 0;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      background: url("../img/icon/success.png") no-repeat;
+      height: 30px;
+      width: 30px;
+      background-size: 100% 100%;
+    }
+    span {
+      font-size: 18px;
+      color: #02af00;
+      vertical-align: middle;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+  }
+  .product {
+    position: relative;
+    .img {
+      float: left;
+    }
+    .txt {
+      float: left;
+      margin-left: 20px;
+      .title {
+        font-size: 13px;
+      }
+      .spec {
+        color: #c6c6c8;
+        margin-top: 6px;
+      }
+    }
+    .btn-group {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+// 赘余
+.order-content {
+
+  &__label {
+    float: left;
+    width: 120px;
+    text-align: right;
+    line-height: 30px;
+  }
+  &__text {
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;}
+}
+
+
+
+

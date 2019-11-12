@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="微信支付页"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <div class="account webchat">
+      <div class="container">
+        <div class="txt cl">
+          <div class="fl">
+            <div class="payment-title">
+              订单提交成功，请尽快付款订单编号：<em>201902050055</em>
+            </div>
+          </div>
+          <div class="fr">
+            <div class="payment-price">应付金额： ￥<em>668</em>元</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="hd">
+            <strong>微信支付 </strong>
+            <div class="desc">
+              二维码有效时长为
+              <span><template src="countdown/index.html"></template></span
+              >，请尽快支付
+            </div>
+          </div>
+          <div class="bd cl">
+            <div class="fl">
+              <img src="https://dummyimage.com/340x360/000/fff" alt="" />
+              <div class="desc">请使用微信扫一扫扫描二维码支付</div>
+            </div>
+            <div class="fr">
+              <img src="img/payment/pay-webchat.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template src="common/footer.html"></template>
+  </body>
+</html>

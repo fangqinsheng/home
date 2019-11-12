@@ -1,0 +1,120 @@
+<!--主体-->
+<section class="admin-main tab invoice">
+    <div class="tabBar cl">
+        <strong>我的发票</strong>
+        <span>待开票</span>
+        <span>已开票</span>
+    </div>
+
+    <div class="invoice-comment">
+        <div>
+            <i class="iconfont icon-tips"></i>开票小贴士
+        </div>
+        <ol>
+            <li>下单时选择开具"普通发票"的，默认开具电子发票</li>
+            <li>平台将按下单时间统一开具发票并快递给您，如急需发票也可以申请加急，我们会将发票寄顺丰到付给您。</li>
+            <li>开具电子发票的可以自行在"我的发票-查看发票详情-下载电子发票"中进行电子发票下载操作。</li>
+            <li>如有特殊开票需求，可在卡票备注中进行说明。</li>
+        </ol>
+    </div>
+
+    <div class="invoice-filter">
+        <div class="f-item">
+            <span>订单编号：</span>
+            <input type="text" title="">
+        </div>
+        <div class="f-item">
+            <span>开票类型：</span>
+            <select name="" id="" title="请选择">
+                <option value="请选择">请选择</option>
+                <option value="普通发票">普通发票</option>
+                <option value="增值税发票">增值税发票</option>
+            </select>
+        </div>
+        <div class="f-item">
+            <span>开票时间：</span>
+            <template src="date/index.html" obj="invoice-date start-date"></template>
+            <span>至</span>
+            <template src="date/index.html" obj="invoice-date end-date"></template>
+        </div>
+        <a href="" class="btn btn--default">查询</a>
+    </div>
+
+    <div class="tab-content invoice-list tabCon" id="online">
+        <table class="invoice-table">
+            <thead>
+            <tr>
+                <th>申请单号</th>
+                <th>申请开票时间</th>
+                <th>订单金额合计</th>
+                <th>发票类型</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>增值税发票</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>增值税发票</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>增值税发票</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-content invoice-list tabCon" id="paper">
+        <table class="invoice-table">
+            <thead>
+            <tr>
+                <th>申请单号</th>
+                <th>申请开票时间</th>
+                <th>订单金额合计</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td>0202056054512</td>
+                <td>2018-03-12 08:00</td>
+                <td>￥205</td>
+                <td>异常发票</td>
+                <td><a href="">删除</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

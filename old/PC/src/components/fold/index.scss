@@ -1,0 +1,28 @@
+/**
+ * @name: 折叠框
+ * @author: 钦昇
+ * @used：guide.html
+ */
+.fold {
+  .item{
+    position:relative;
+    h4{
+      margin:0;
+      font-weight:bold;
+      position:relative;
+      border-top: 1px solid #fff;
+      font-size:14px;
+      line-height:22px;
+      background-color:#eee;
+      cursor:pointer;
+      padding: 7px 30px 7px 10px;
+      b{
+        display: block;
+        position:absolute; right:10px; top:7px;
+        width:16px; height:16px; text-align:center; color:#666;
+        cursor:pointer;
+      }
+    }
+    .info{ display:none; }
+  }
+}

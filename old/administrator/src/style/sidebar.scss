@@ -1,0 +1,52 @@
+.app {
+  .aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: hidden;
+    height: 100%;
+    width: 200px !important;
+    transition: width ease-in 0.28s;
+  }
+  .main {
+    position: relative;
+    min-height: 100%;
+    margin-left: 200px;
+    .app-header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9;
+      width: calc(100% - 200px);
+      transition: width ease-in 0.28s;
+    }
+ }
+  .hideSidebar {
+    .aside {
+      width: 54px !important;
+    }
+    .main {
+      margin-left: 54px;
+      .app-header { width: calc(100% - 54px); }
+    }
+  }
+}
+
+.app .hideSidebar.mobile .aside {
+  width: 0 !important;
+}
+.app .hideSidebar.mobile .main {
+  margin-left: 0;
+}
+.app .hideSidebar.mobile .app-header {
+  width: 100%;
+}
+.app .hideSidebar.mobile .app-main {
+  margin-left: 0;
+}
+// 清除滚动框的水平轴
+.app .aside .el-scrollbar__wrap {
+  overflow-x: hidden !important;
+}

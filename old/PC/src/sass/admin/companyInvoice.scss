@@ -1,0 +1,64 @@
+/**************************************************************
+************************* 后台发票管理 ****************************
+**************************************************************/
+.invoice {
+  .tabBar {
+    padding: 10px 20px;
+    span {
+      height: 36px;
+      line-height: 36px;
+      padding: 0;
+      margin-left: 20px;
+    }
+    strong {
+      float: left;
+      line-height: 36px;
+    }
+  }
+
+  &-list {
+    padding: 20px;
+  }
+
+  &-comment {
+    padding: 10px 20px;
+    margin: 0 20px;
+    background-color: #cacbcb;
+    ol {
+      padding-left: 40px;
+    }
+  }
+
+  &-filter {
+    margin: 20px;
+    .btn {
+      padding: 5px 24px;
+    }
+    .f-item {
+      float: left; margin-right: 15px;
+      span { font-size: 13px; }
+      input, select {
+        border: 1px solid #ccc;
+        line-height: 30px; height: 30px;
+        width: 130px;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+    }
+    &-btn {
+      //padding: 10px ;
+    }
+  }
+
+  &-table {
+    tr {}
+    th {}
+    td {
+      border: 1px solid #f2f2f2;
+      padding: 10px 5px;
+    }
+    thead {}
+    tbody {}
+  }
+}

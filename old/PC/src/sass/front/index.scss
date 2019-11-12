@@ -1,0 +1,322 @@
+/*************************************************************************
+************************ banner轮播图 *******************************
+*************************************************************************/
+#banner {
+  position: relative;
+  height: 360px !important;
+  .container {
+    padding: 0;
+    height: 360px;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  overflow: hidden;
+  height: 360px !important;
+  width: 100%;
+
+  &-item {
+    position: absolute;
+    height: 360px !important;
+  }
+
+  .slick-dots {
+    li {
+      button {
+        &:before {
+          font-size: 38px;
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+//个人登录面板
+.fb {
+  position: absolute;
+  right: 0;
+  top: 26px;
+  z-index: 999;           // 层叠999
+  padding: 20px 15px;
+  width: 180px;
+  background: #fff;
+  //头像
+  .img {
+    text-align: center;
+    margin-bottom: 10px;
+    img {
+      border-radius: 50%;
+      width: 54px;
+      height: 54px;
+    }
+  }
+  //问候语
+  .greeting { text-align: center; margin-bottom: 15px; }
+  //按钮组
+  .opt {
+    margin-bottom: 15px;
+    a {
+      display: inline-block;
+      padding: 6px 25px;
+      color: #fff;
+      border-radius: 4px;
+    }
+    //登录按钮
+    .login-btn {
+      background-color: #ce3336;
+    }
+    //注册按钮
+    .register-btn {
+      margin-left: 15px;
+      background-color: #5c5c5c;
+    }
+  }
+  //消息公告
+  .notice {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #f7f7f7;
+    border-bottom: 1px solid #f7f7f7;
+    //字符
+    .label {
+      float: left;
+      width: 40px;
+      line-height: 20px;
+    }
+    //跑马灯
+    .marquee {
+      height: 40px;
+      overflow: hidden;
+      line-height: 20px;
+    }
+    .txt {
+      float: left;
+    }
+  }
+  //快速访问
+  .quick-links {
+    ul {
+      li {
+        float: left;
+        width: 60px;
+        text-align: center;
+        a {
+          display: block;
+          line-height: 1;
+          &:hover {
+            span { color: #3369b2; }
+          }
+        }
+        i { font-size: 30px; color: #3369b2; margin-bottom: 6px; }
+        span {}
+      }
+    }
+  }
+}
+/*************************************************************************
+************************** category栏目 **********************************
+*************************************************************************/
+.category {
+  margin-top: 30px;
+  .inner {
+    //margin-bottom: 30px;
+  }
+  .adv {
+    display: block;
+    line-height: 0;
+  }
+  .hd {
+    position: relative;
+    height: 76px;
+    background: #fff;
+    padding-left: 30px;
+    dl {
+    }
+    dt {
+      display: inline-block;
+      font-size: 25px;
+      font-weight: 700;
+      padding: 20px 0;
+    }
+    dd {
+      display: inline-block;
+      a {
+        margin-left: 15px;
+        font-size: 14px;
+        color: rgba(102, 102, 102, 1);
+      }
+    }
+    .g-link {
+      position: absolute;
+      right: 30px;
+      top: 32px;
+      font-size: 14px;
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .bd {
+    ul {
+      margin-right: -5px;
+      margin-bottom: 30px;
+      li {
+        margin-right: 5px;
+        margin-top: 5px;
+        float: left;
+        a {
+          display: block;
+          line-height: 0;
+          vertical-align: middle;
+        }
+      }
+    }
+    .item {
+      background: #fff;
+      height: 290px;
+      width: (1170-20)/5 + px;
+      border-radius: 5px;
+      &:hover {
+        box-shadow:0 0 5px #ccc;
+      }
+      .inner {
+        padding: 30px 15px;
+      }
+      img {
+        padding: 0 20px;
+      }
+      .title {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .price {
+        font-size: 13px;
+        color: #e60012;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+/*************************************************************************
+************************** 文章内容入口 **********************************
+*************************************************************************/
+.article {
+  //标题
+  .hd {
+    padding: 20px;
+    overflow: hidden;
+    span {
+      float: left;
+      font: 700 18px/20px "Microsoft YaHei";
+    }
+    a {
+      float: right;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999;
+    }
+  }
+  // 左
+  &--l {
+    float: left;
+    width: 410px;
+    background-color: #fff;
+    .bd {
+      .slick-list { margin: 0 20px; font-size: 0; padding-bottom: 4px; }
+      .slick-arrow {
+        background-color: #d9d9d9;
+        height: 40px;
+        &:hover {
+          background-color: #3c3c3c;
+        }
+        &::before {
+          color: #fff;
+        }
+      }
+    }
+  }
+  // 右
+  &--r {
+    float: right;
+    width: 740px;
+    margin-left: 20px;
+    .row {
+      background-color: #fff;
+      margin-bottom: 20px;
+      .bd {
+        height: 126px;
+        padding: 0 20px;
+      }
+      .slick-dotted.slick-slider {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+      .slick-dots {
+        bottom: 0;
+        button {
+          &:before {
+            content: "";
+            background-color: #7F7F7F;
+            width: 16px;
+            height: 10px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+    .item {
+      overflow: hidden;
+    }
+    //图片
+    .img {
+      float: left;
+      width: 160px;
+    }
+    //文字
+    .txt {
+      float: left;
+      margin-left: 20px;
+      width: 520px;
+    }
+  }
+  //图片
+  &-pic {
+    margin-bottom: 16px;
+  }
+  //标题
+  &-title {
+    margin-bottom: 12px;
+    a {
+      font-size: 16px;
+      font-weight: bold;
+      &:hover {
+        color: #d0021b;
+      }
+    }
+  }
+  //描述
+  &-desc {
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+  }
+  //内容
+  &-info {
+    width: 100%;
+  }
+}
+

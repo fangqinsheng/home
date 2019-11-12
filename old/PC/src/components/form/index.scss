@@ -1,0 +1,98 @@
+//输入框
+.input-txt {
+  box-sizing: border-box;
+  border: solid 1px #ddd;
+  width: 100%;
+  transition: all .2s linear 0s;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  padding: 4px 15px;
+  &.radius {
+    border-radius: 4px;
+    behavior: url(assets/PIE.htc);
+  }
+  &.round {
+    border-radius: 20px;
+    behavior: url(assets/PIE.htc);
+  }
+}
+
+
+//多选框
+.checkbox {
+  color: #606266;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  //输入框
+  &__input {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+  }
+  //选中钩子
+  &__inner {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #dcdfe6;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    z-index: 1;
+    &:before {
+      content: "";
+    }
+    &:hover {
+      border-color: #CE3336;
+    }
+  }
+  //原始
+  &__original {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    margin: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+  //文本
+  &__label {
+    display: inline-block;
+    padding-left: 10px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+
+
+//选中时
+.checkbox__input {
+  &.is-checked {
+    .checkbox__inner {
+      background-color: #CE3336;
+      border-color: #CE3336;
+      &:before {
+        font-family: "iconfont" !important;
+        content: "\e655";
+        font-size: 12px;
+        font-style: normal;
+        color: #fff;
+        vertical-align: top;
+        -webkit-font-smoothing: antialiased; // 字体加抗锯齿
+        -moz-osx-font-smoothing: grayscale;  // 字体加抗锯齿
+      }
+    }
+  }
+}

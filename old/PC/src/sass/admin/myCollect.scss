@@ -1,0 +1,67 @@
+/**************************************************************
+************************* 收藏页面 ****************************
+**************************************************************/
+.collect {
+  background-color: #fff;
+  &-box {
+    padding: 20px 5px;
+
+    ul {
+    }
+    li {
+      float: left;
+      width: (950-110)/6 + px;
+      margin: 10px;
+      .img {
+        position: relative;
+        overflow: hidden;
+        img {
+          display: block;
+          line-height: 0;
+        }
+        &:hover .operate {
+          bottom: 0;
+        }
+      }
+      .operate {
+        position: absolute;
+        text-align: center;
+        bottom: -30px;
+        width: 100%;
+        transition: bottom 0.38s ease-in-out;
+        a {
+          padding: 4px 0;
+          display: block;
+          width: 69px;
+          color: #fff;
+          &.g-view {
+            float: left;
+            background-color: #ff4401;
+          }
+          &.g-delete {
+            float: right;
+            background-color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+      .name {
+        padding: 0 6px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+          line-height: 20px;
+          width: 100%;
+        }
+      }
+      .price {
+        text-align: center;
+        em {
+          font-size: 14px;
+          color: #d0021b;
+        }
+      }
+    }
+  }
+}

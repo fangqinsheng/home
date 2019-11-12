@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="个人中心"></template>
+  <body>
+    <template src="common/shortcut.html"></template>
+
+    <template src="common/header.html"></template>
+
+    <section class="admin">
+      <div class="container">
+        <!-- 侧边栏 -->
+        <template src="aside/index.html"></template>
+        <!-- 主体 -->
+        <template src="admin/invoice.html"></template>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+    <script src="assets/jquery/jquery.date.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $(".invoice-date").jcDate({
+                IcoClass : "jcDateIco",
+                Event : "click",
+                Speed : 100,
+                Left : 0,
+                Top : 28,
+                format : "-",
+                Timeout : 100
+            });
+        });
+    </script>
+    <script>
+        $(".tab").tab({
+          index: 0
+        });
+    </script>
+  </body>
+</html>

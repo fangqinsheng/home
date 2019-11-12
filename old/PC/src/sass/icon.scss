@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1389664 */
+  src: url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.eot');
+  src: url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1389664_kz5zhrk1pe.svg#iconfont') format('svg');
+}
+
+// iconfont图标
+.iconfont {
+  display: block;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; // 字体加抗锯齿
+  -moz-osx-font-smoothing: grayscale;  // 字体加抗锯齿
+}
+
+//积分
+.icon-integral:before {
+  content: "\e60d";
+}
+
+//会员
+.icon-member:before {
+  content: "\e60c";
+}
+
+//充值
+.icon-recharge:before {
+  content: "\e60b";
+}
+
+//其他
+.icon-other:before {
+  content: "\e60a";
+}
+
+//周转
+.icon-turnover:before {
+  content: "\e608";
+}
+
+// 楼面
+.icon-floor:before {
+  content: "\e607";
+}
+
+// 后厨
+.icon-chef:before {
+  content: "\e606";
+}
+
+//下拉框
+.icon-dropdown:before {
+  content: "\e650";
+}
+
+
+//搜索
+.icon-search:before {
+  content: "\e602";
+}
+
+//购物车
+.icon-trolley:before {
+  content: "\e603";
+}
+
+//电话
+.icon-telephone:before {
+  content: "\e605";
+}
+
+//三角形上
+.icon-triangle-up:before {
+  content: "\e61d";
+}
+
+//三角形下
+.icon-triangle-down:before {
+  content: "\e61e";
+}
+
+//三角形左
+.icon-triangle-left:before {
+  content: "\e621";
+}
+
+//三角形右
+.icon-triangle-right:before {
+  content: "\e61f";
+}
+
+//箭头上
+.icon-arrow-up:before {
+  content: "\e619";
+}
+
+//箭头下
+.icon-arrow-down:before {
+  content: "\e61a";
+}
+
+//箭头左
+.icon-arrow-left:before {
+  content: "\e61c";
+}
+
+//箭头右
+.icon-arrow-left:before {
+  content: "\e61b";
+}

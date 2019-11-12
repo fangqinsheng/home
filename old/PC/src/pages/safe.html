@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<template src="common/head.html" title="个人中心"></template>
+<body>
+<template src="common/topnav.html"></template>
+
+<template src="common/header.html"></template>
+
+<section class="admin">
+    <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <main class="admin-main safe">
+            <div class="hd"></div>
+            <div>
+                <a href="setPay.html" class="item">
+                    <div class="item-icon">
+                        <i class="iconfont icon-c-payCode"></i>
+                    </div>
+                    <h3 class="item-title">支付密码</h3>
+                    <div class="item-desc">小钱包支付时使用</div>
+                    <div class="item-link">设置支付密码</div>
+                </a><a href="setPassword.html" class="item">
+                    <div class="item-icon">
+                        <i class="iconfont icon-c-password"></i>
+                    </div>
+                    <h3 class="item-title">登录密码</h3>
+                    <div class="item-desc">修改登录时所用密码</div>
+                    <div class="item-link">重设密码</div>
+                </a><a href="setEmail.html" class="item">
+                    <div class="item-icon">
+                        <i class="iconfont icon-c-email"></i>
+                    </div>
+                    <h3 class="item-title">绑定邮箱</h3>
+                    <div class="item-desc">绑定邮箱提高安全性</div>
+                    <div class="item-link">设置邮箱</div>
+                </a><a href="setTellphone.html" class="item">
+                    <div class="item-icon">
+                        <i class="iconfont icon-c-tell"></i>
+                    </div>
+                    <h3 class="item-title">绑定手机号码</h3>
+                    <div class="item-desc">手机号码如更换</div>
+                    <div class="item-link">修改手机号码</div>
+                </a>
+            </div>
+        </main>
+    </div>
+</section>
+
+<template src="common/footer.html" UI></template>
+<script>
+    $("#order").tabs();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--充值-->
+<section class="admin-main">
+    <h2 class="admin-main--title">
+        <i class="iconfont icon-wallet"></i><span>填写充值金额</span>
+    </h2>
+    <section class="recharge">
+        <div class="recharge-box" id="alipay">
+            <div class="item">
+                <div class="label">充值账户：</div>
+                <div class="value">fqs8226</div>
+            </div>
+            <div class="item">
+                <div class="label">充值金额：</div>
+                <div class="value">
+                    <input type="text" title="" id="money" value="50" /><span class="unit">元</span><span class="txt-red">只能填写大于等于10，小于等于50000的整数金额。</span>
+                    <div class="txt-grey">暂不支持提现功能，如需提现请致电客服。在线支付成功后，充值金额会在一分钟内到账。</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="label">交易平台：</div>
+                <div class="value">
+                    <input type="radio" title="" name="payment"><img src="img/admin/alipay.jpg" alt="支付宝">
+                    <input type="radio" title="" name="payment"><img src="img/admin/webchat.jpg" alt="微信">
+                </div>
+            </div>
+            <a href="javascript: void(0);" onclick="recharge()" class="btn btn--red" id="recharge-btn">确认</a>
+        </div>
+    </section>
+</section>

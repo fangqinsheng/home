@@ -1,0 +1,93 @@
+/**************************************************************
+************************ 设置支付密码 **************************
+**************************************************************/
+.settings {
+  background-color: #fff;
+  &-title {
+    border-bottom: 1px solid #e3e3e3;
+    line-height: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    span {
+      font: 700 16px/20px "Microsoft YaHei";
+      margin-left: 10px;
+    }
+  }
+  &-box {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-color: #fff;
+    .inner {
+      position: absolute;
+      top: 50%; left: 50%;
+    }
+
+    .item {
+      zoom: 1;
+      overflow: hidden;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+      }
+    }
+
+    .label {
+      float: left;
+      width: 100px;
+      text-align: right;
+      line-height: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    .value {
+      float: left;
+      position: relative;
+      width: 240px;
+      input {
+        border: 1px solid #e3e3e3;
+        background-color: #fff;
+        width: 218px;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 10px;
+      }
+      .valid-phone {
+        width: 118px;
+      }
+
+      .g-validcode {
+        background-color: #0d64b1;
+        color: #fff;
+        line-height: 20px;
+        display: inline-block;
+        padding: 6px 10px;
+        margin-left: 20px;
+      }
+      .g-validSMS {
+        position: absolute;
+        right: 0; top: 0;
+        img {
+          display: block;
+          line-height: 0;
+        }
+      }
+    }
+
+    .handle-save {
+      display: inline-block;
+      padding: 8px 40px;
+      background-color: #e6292c;
+      color: #fff;
+    }
+  }
+}

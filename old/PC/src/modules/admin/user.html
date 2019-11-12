@@ -1,0 +1,193 @@
+<section class="admin-main" id="user">
+    <div class="tabBar cl">
+        <span>个人信息</span>
+        <span>头像设置</span>
+        <span>企业信息</span>
+    </div>
+    <!--个人信息-->
+    <div class="tabCon cl" id="user-info">
+        <div class="img">
+            <img src="https://dummyimage.com/100x100/000/fff" alt="" height="100" width="100"/>
+            <div class="type">
+                类型: <em>终端商</em>
+            </div>
+        </div>
+        <div class="form">
+            <form action="">
+                <!--用户名-->
+                <div class="item">
+                    <div class="label">用户名：</div>
+                    <div class="value">fqs8226</div>
+                </div>
+                <!--登录名-->
+                <div class="item">
+                    <div class="label">登录名：</div>
+                    <div class="value">
+                        <input type="text" name="userName" class="input__inner" title="" />
+                    </div>
+                </div>
+                <!--性别-->
+                <div class="item">
+                    <div class="label">性别：</div>
+                    <div class="value">
+                        <input type="radio" name="sex" title=""><span>先生</span>
+                        <input type="radio" name="sex" title=""><span>女士</span>
+                    </div>
+                </div>
+                <!--性别-->
+                <div class="item">
+                    <div class="label">所在省市：</div>
+                    <div class="value">
+                        <select id="memberArea" onchange="checkmemberArea()" title="">
+                            <option value="-1" selected>请选择</option>
+                        </select>
+                        <div class="error-msg"></div>
+                    </div>
+                </div>
+                <!--生日-->
+                <div class="item">
+                    <div class="label">生日：</div>
+                    <div class="value">
+                        <template src="birthday/index.html"></template>
+                    </div>
+                </div>
+                <button class="button button--small button--danger is-radius">确认保存</button>
+            </form>
+        </div>
+    </div>
+    <!--用户头像-->
+    <div class="tabCon cl" id="user-avatar" >
+        <div class="fl">
+            <div class="avatar-uploader">
+                <template src="upload/index.html"></template>
+            </div>
+            <div class="avatar-recommend">
+                <h3>推荐头像</h3>
+                <ul class="cl">
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="" />
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="btn btn--red">确认保存</a>
+            </div>
+        </div>
+        <div class="fr">
+            <h3>效果预览</h3>
+            <div class="txt-tan">
+                你上传的头像自动裁剪成50*50像素的尺寸，请留意头像是否清晰
+            </div>
+            <div class="img-preview">
+                <div class="img">
+                    <img src="https://dummyimage.com/100x100/000/fff" alt="100x100" />
+                </div>
+                <div>100*100像素</div>
+            </div>
+            <div class="img-preview">
+                <div class="img">
+                    <img src="https://dummyimage.com/50x50/000/fff" alt="100x100" />
+                </div>
+                <div>50*50像素</div>
+            </div>
+        </div>
+    </div>
+    <!--企业信息-->
+    <div class="tabCon" id="user-company">
+        <div class="user-company">
+            <div class="form">
+                <div class="item">
+                    <div class="label">企业名称</div>
+                    <div class="value">
+                        <div class="input">
+                            <input class="input__inner" title="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">企业简称</div>
+                    <div class="value">
+                        <div class="input">
+                            <input class="input__inner" title="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">详细地址</div>
+                    <div class="value">
+                        <div class="input">
+                            <input class="input__inner" title="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">邮编</div>
+                    <div class="value">
+                        <div class="input">
+                            <input class="input__inner" title="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">企业传真</div>
+                    <div class="value">
+                        <div class="input">
+                            <input class="input__inner" title="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label"></div>
+                    <div class="value">
+                        <button class="button button--danger button--small">保存修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

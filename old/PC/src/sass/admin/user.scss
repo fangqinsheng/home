@@ -1,0 +1,146 @@
+/*************************************************************************
+**************************** user个人信息 *****************************
+*************************************************************************/
+#user {
+  background-color: #fff;
+  //用户信息
+  &-info {
+    width: 520px;
+    overflow: hidden;
+    padding: 60px 0;
+    margin: 0 auto;
+    //头像
+    .img {
+      float: left;
+      text-align: center;
+      margin-right: 60px;
+      img {
+        border-radius: 50%;
+      }
+    }
+    //会员类型
+    .type {
+      font-size: 13px;
+      line-height: 20px;
+    }
+    //表单
+    .form {
+      float: left;
+      .item {
+        zoom: 1;
+        margin: 10px 0;
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+          height: 0;
+          visibility: hidden;
+        }
+      }
+      .label {
+        float: left;
+        width: 86px;
+        //font-size: 14px;
+        line-height: 20px;
+        height: 20px;
+      }
+      .value {
+        float: left;
+        margin-left: 6px;
+        line-height: 26px;
+        font-size: 14px;
+        select {
+          height: 24px;
+          padding: 0 2px;
+        }
+        //input { font-size: 12px; }
+        input[type="text"] {
+          height: 26px;
+          line-height: 26px;
+          padding: 0 10px;
+        }
+        input[type="radio"] {
+          vertical-align: middle;
+        }
+        span {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+  //用户头像
+  &-avatar {
+    padding: 30px;
+    .fl {
+      width: 420px;
+    }
+    .fr {
+      float: left;
+      margin-left: 60px;
+      width: 300px;
+      .img-preview {
+        margin-top: 16px;
+        .img {
+          margin-bottom: 6px;
+        }
+      }
+    }
+    //通用标题
+    h3 {
+      font: bold 16px/20px "Microsoft YaHei";
+      margin-bottom: 12px;
+    }
+    // 头像上传
+    .avatar-uploader {
+      float: left;
+    }
+    //推荐头像
+    .avatar-recommend {
+      float: left;
+      h3 {
+      }
+      li {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        a {
+          img {
+          }
+        }
+      }
+    }
+  }
+  //企业信息
+  &-company {
+    //padding-left: 40px;
+    padding: 60px 0 60px 40px;
+    .item {
+      zoom: 1;
+      overflow: hidden;
+      margin-bottom: 12px;
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+      .label {
+        float: left;
+        width: 120px;
+        line-height: 32px;
+        height: 32px;
+        text-align: right;
+      }
+      .value {
+        float: left;
+        width: 260px;
+        margin-left: 10px;
+        .input__inner {
+          height: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="惠而信商城首页"></template>
+  <body>
+    <template src="brand/index.html" collect></template>
+
+    <section class="login">
+      <div class="login-bg"></div>
+      <div class="container">
+        <div class="tab login-box">
+            <div class="tabBar">
+                <span>快捷登录</span><span>账号登录</span>
+            </div>
+            <div class="tabCon">
+              <form action="" class="login-form quick-login">
+                <div class="item">
+                    <input class="input-txt" id="tel" title=""
+                           type="text" name="tel" placeholder="手机号码"
+                    />
+                    <div class="error-message">请输入正确的手机号码</div>
+                </div>
+                <div class="item">
+                  <div class="input">
+                    <input
+                      class="input-txt"
+                      id="code"
+                      type="text"
+                      name="code"
+                      placeholder="动态密码"
+                      title=""
+                    />
+                    <div class="cover">
+                      <a href="">获取动态密码</a>
+                    </div>
+                  </div>
+                  <div class="error-message">请输入正确的手机号码</div>
+                </div>
+                <div class="item">
+                  <button type="button" class="btn">登录</button>
+                </div>
+              </form>
+            </div>
+            <div class="tabCon">
+              <form action="" class="login-form account-login">
+                <div class="item">
+                    <input
+                      class="input-txt"
+                      type="text"
+                      name="username"
+                      placeholder="邮箱/用户名/已验证手机"
+                      title=""
+                    />
+                  <div class="error-message">请输入正确的手机号码</div>
+                </div>
+                <div class="item">
+                    <input
+                      class="input-txt"
+                      type="password"
+                      name="password"
+                      placeholder="请输入密码"
+                      title=""
+                    />
+                  <div class="error-message">请输入正确的手机号码</div>
+                </div>
+                <div class="item">
+                    <input
+                      class="input-txt"
+                      type="text"
+                      name="valid"
+                      placeholder="图片验证码"
+                      title=""
+                    />
+                    <div class="valid">
+                      <a href="javascript:void(0);">
+                        <img
+                          src="https://dummyimage.com/120x40/000/fff"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  <div class="error-message">请输入正确的手机号码</div>
+                </div>
+                <div class="item cl">
+                  <div class="fl">
+                    <input
+                      type="checkbox"
+                      title=""
+                      class="checkbox"
+                    />记住密码
+                  </div>
+                  <div class="fr">
+                    <a href="">忘记密码？</a>
+                  </div>
+                </div>
+                <div class="item">
+                  <button type="button" class="btn">登录</button>
+                </div>
+              </form>
+            </div>
+            <div class="toolbar cl">
+                <div class="fl">
+                    <a href="" class="icon-qq">QQ</a>
+                    <a href="" class="icon-webChat">微信</a>
+                </div>
+                <div class="fr">
+                    <a href="" class="register-btn">立即注册</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <template src="footer/index.html"></template>
+  </body>
+</html>
+<script>
+$(function () {
+  $(".tab").tab();
+})
+</script>

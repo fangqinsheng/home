@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="企业介绍"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <section class="guide">
+      <div class="container">
+        <!--侧边栏-->
+        <aside class="aside">
+          <ul class="fold accordion" id="accordion">
+            <li class="item">
+              <h4>
+                <span>操作指南</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="guide.html">注册流程</a></li>
+                <li><a href="enterprise.html">企业认证</a></li>
+                <li><a href="http://www.baidu.com">购物流程</a></li>
+                <li><a href="http://www.baidu.com">申请发票</a></li>
+                <li><a href="http://www.baidu.com">确认收货</a></li>
+                <li><a href="http://www.baidu.com">取消订单</a></li>
+                <li><a href="http://www.baidu.com">我的收货地址</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <h4>
+                <span>支付方式</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="http://www.baidu.com">支付宝</a></li>
+                <li><a href="http://www.baidu.com">微信支付</a></li>
+                <li><a href="http://www.baidu.com">银行汇款</a></li>
+                <li><a href="http://www.baidu.com">惠钱包</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <h4>
+                <span>售后服务</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="http://www.baidu.com">平台法律声明</a></li>
+                <li><a href="http://www.baidu.com">物流配送</a></li>
+                <li><a href="http://www.baidu.com">投诉与建议</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <h4>
+                <span>常见问题</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="http://www.baidu.com">如何修改密码？</a></li>
+                <li><a href="http://www.baidu.com">忘记密码怎么办？</a></li>
+                <li><a href="http://www.baidu.com">平台支持哪些浏览器？</a></li>
+                <li><a href="http://www.baidu.com">有哪几种发票？</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <h4>
+                <span>操作指南</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="http://www.baidu.com">注册流程</a></li>
+                <li><a href="http://www.baidu.com">企业认证</a></li>
+                <li><a href="http://www.baidu.com">购物流程</a></li>
+                <li><a href="http://www.baidu.com">申请发票</a></li>
+                <li><a href="http://www.baidu.com">确认收货</a></li>
+                <li><a href="http://www.baidu.com">取消订单</a></li>
+                <li><a href="http://www.baidu.com">我的收货地址</a></li>
+              </ul>
+            </li>
+            <li class="item">
+              <h4>
+                <span>售后服务</span>
+                <i class="iconfont icon-triangle-down"></i>
+              </h4>
+              <ul class="info">
+                <li><a href="http://www.baidu.com">平台法律声明</a></li>
+                <li><a href="http://www.baidu.com">物流配送</a></li>
+                <li><a href="http://www.baidu.com">投诉与建议</a></li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <!--主题内容-->
+        <section class="main">
+          <template
+            src="article/index.html"
+            step="1"
+            title="登录官网"
+            desc="打开微信公众平台官网：mp.weixin.qq.com,点击右上角蓝色字体【立即注册】。"
+            img="https://dummyimage.com/890x400/000/fff"
+          ></template>
+          <template
+            src="article/index.html"
+            step="2"
+            title="登录官网"
+            desc="打开微信公众平台官网：mp.weixin.qq.com,点击右上角蓝色字体【立即注册】。"
+            img="https://dummyimage.com/890x400/000/fff"
+          ></template>
+          <template
+            src="article/index.html"
+            step="3"
+            title="登录官网"
+            desc="打开微信公众平台官网：mp.weixin.qq.com,点击右上角蓝色字体【立即注册】。"
+            img="https://dummyimage.com/890x400/000/fff"
+          ></template>
+        </section>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+
+    <script>
+      window.onload = function () {
+        $("#accordion").Huifold({
+          titCell:'.item h4',
+          mainCell:'.item .info',
+          type:1,
+          trigger:'click',
+          className:"selected",
+          speed:"first",
+        });
+        const url = window.location.href;
+        const arr = document.getElementById("accordion").getElementsByTagName("a");
+        for(let i = 0; i < arr.length; i++) {
+          const a = arr[i];
+          if(a.href === url) {
+              $(a).addClass("on");
+              $(a).parent().parent().css("display","block");
+              $(a).parent().parent().siblings("h4").addClass("selected");
+          }
+        }
+      };
+    </script>
+
+  </body>
+</html>

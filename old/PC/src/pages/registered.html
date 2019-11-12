@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<template src="common/head.html" title="惠而信商城注册页"></template>
+<body>
+<template src="brand/index.html" collect></template>
+
+<section class="register-box">
+  <div class="container">
+    <div class="register">
+      <!--个人信息-->
+      <div class="inner user-info">
+        <div class="content">
+          <div class="hd">
+            <ul class="cl">
+              <li class="on">
+                <i>1</i>
+                <span>填写注册信息</span>
+              </li>
+              <li>
+                <i>2</i>
+                <span>注册成功</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bd">
+            <form action="" id="validateForm" class="register-form">
+                <div class="item">
+                <div class="label">用户名</div>
+                <div class="value">
+                <input type="text" title="" name="loginName" class="input-txt" />
+<!--                <div class="error-msg">请输入正确的用户名</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">密码</div>
+                <div class="value">
+                <input type="password" title="" name="password" class="input-txt" />
+<!--                <div class="error-msg">请输入正确的用户名</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">确认密码</div>
+                <div class="value">
+                <input type="password" title="" name="checkPassword" class="input-txt" />
+<!--                <div class="error-msg">请输入正确的用户名</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">名称</div>
+                <div class="value">
+                <input type="text" title="" name="name" class="input-txt" />
+<!--                <div class="error-msg">请输入正确的用户名</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">地区</div>
+                <div class="value">
+                <template src="select/index.html"></template>
+<!--                <div class="error-msg">请选择地区</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">验证手机</div>
+                <div class="value">
+                <input type="text" title="" name="mobile" class="input-txt" />
+<!--                <div class="error-msg">请输入正确的用户名</div>-->
+                </div>
+                </div>
+                <div class="item">
+                <div class="label">手机验证码</div>
+                <div class="value">
+                <input type="text" title="" name="valid" class="input-txt" />
+                <a href="" class="cover">发送验证码</a>
+                </div>
+                </div>
+                <div class="item">
+                <div class="label"></div>
+                <div class="value">
+                <input type="radio" title="" name="radio" />
+                阅读并同意《用户服务协议》
+                </div>
+                </div>
+                <div class="item">
+                <div class="label"></div>
+                <div class="value">
+                    <button class="btn" id="registered-btn">马上注册</button>
+                </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--企业信息-->
+      <div class="inner company-info hide">
+        <div class="title"><i></i><span>恭喜您！账号注册成功</span></div>
+        <p class="desc">
+          您的惠而信账号是<em>12345</em>，您可以使用此用户名购买放心的产品，享受舒心的服务！请保管好您的账号密码，不要与他人共用一个账号，在公共场合请谨慎使用。
+        </p>
+        <div class="tips">
+          下一步请继续完善相关信息<a href="">跳过直接登录访问</a>
+        </div>
+        <div class="content">
+          <form action="" class="register-form">
+            <div class="item">
+              <div class="label">公司名称</div>
+              <div class="value">
+                <input type="text" title="" class="input-txt" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label">公司地址</div>
+              <div class="value">
+                <input type="text" title="" class="input-txt" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label">传真&电话</div>
+              <div class="value">
+                <input type="text" title="" class="input-txt" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label">单位机构</div>
+              <div class="value">
+                <input type="text" title="" class="input-txt" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label">企业邮箱</div>
+              <div class="value">
+                <input type="text" title="" class="input-txt" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label"></div>
+              <div class="value">
+                <button class="btn primary">保存资料</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<template src="footer/index.html"></template>
+</body>
+<script src="assets/jquery.validate.min.js"></script>
+<script src="assets/messages_zh.js"></script>
+<script>
+  (function(){
+    // 手机号码
+    $.validator.addMethod("mobile", function (value, element) {
+      var reg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+      return this.optional(element) || reg.test(value);
+    },"请输入正确手机号码");
+
+    // 中文字两个字节
+    $.validator.addMethod("byteRangeLength", function(value, element, param) {
+      var length = value.length;
+      for(var i = 0; i < value.length; i++){
+        if(value.charCodeAt(i) > 127){
+          length++;
+        }
+      }
+      return this.optional(element) || ( length >= param[0] && length <= param[1] );
+    }, $.validator.format("请确保输入的值在{0}-{1}个字节之间(一个中文字算2个字节)"));
+
+    // 邮政编码验证
+    $.validator.addMethod("isZipCode", function(value, element) {
+      var tel = /^[0-9]{6}$/;
+      return this.optional(element) || (tel.test(value));
+    }, "请正确填写您的邮政编码");
+
+    $("#validateForm").validate({
+      rules: {
+        loginName: "required",
+        password: "required",
+        checkPassword: "required",
+        name: "required",
+        mobile: "required",
+        valid: "required",
+        radio: "required"
+      },
+      message: {
+        loginName: "请输入用户名",
+        password: "请输入密码",
+        checkPassword: {
+          required: "再次输入密码",
+          equalTo: "两次密码输入不一致"
+        },
+        name: {
+          required: "请输入用户名",
+          minlength: "用户名必需由两个字母组成"
+        },
+        mobile: {
+          required: "请输入手机号码",
+          number: "请输入有效的数字",
+          mobile: "请输入正确手机号码"
+        },
+        valid: "",
+        radio: "required"
+      }
+    })
+  }());
+
+</script>
+</html>

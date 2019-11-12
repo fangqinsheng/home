@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="订单详情页"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <section class="admin p30">
+      <div class="container order-details">
+        <template src="breadcrumb/index.html" code="97560526526"></template>
+
+        <template
+          src="order/status.html"
+          payment
+          title="等待付款"
+          code="84084568351"
+        ></template>
+        <template
+          src="order/status.html"
+          delivery
+          title="等待发货"
+          code="84084568351"
+        ></template>
+        <template
+          src="order/status.html"
+          outbound
+          title="商品出库"
+          code="84084568351"
+        ></template>
+        <template
+          src="order/status.html"
+          arrive
+          title="等待签收"
+          code="84084568351"
+        ></template>
+        <template
+          src="order/status.html"
+          sign
+          title="已收货"
+          code="84084568351"
+        ></template>
+        <template src="order/logistics.html"></template>
+        <template src="order/consignee.html"></template>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+  </body>
+</html>

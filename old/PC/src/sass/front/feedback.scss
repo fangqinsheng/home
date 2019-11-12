@@ -1,0 +1,61 @@
+.feedback {
+  .row {
+    padding: 10px 0;
+    select, textarea, .txt-input {
+      width: 100%;
+      outline: none;
+      color: #777;
+      border: 1px solid #EEE;
+      box-sizing: border-box;
+    }
+  }
+
+  select, input {
+    height: 30px;
+    padding-left: 12px;
+    line-height: 30px;
+  }
+  textarea {
+    height: 74px;
+    padding: 6px 0 0 10px !important;
+  }
+
+  &-valid {
+    float: left; width: 320px;
+    input, img, a { float: left; }
+    .identify { width: 150px; border: 1px solid #EEE; margin-right: 15px; }
+    .g-refresh { line-height: 32px; margin-left: 15px; }
+  }
+
+
+
+  &-title {
+    margin-bottom: 10px;
+    span {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+      &:before, &:after {
+        content: "";
+        width: 6px;
+        height: 1px;
+        display: inline-block;
+        background: #444;
+        position: relative;
+        top: -5px;
+      }
+      &:before {
+        margin-right: 6px;
+      }
+      &:after {
+        margin-left: 6px;
+      }
+    }
+  }
+  &-label {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

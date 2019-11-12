@@ -1,0 +1,62 @@
+.service {
+  position: relative;
+  padding: 20px 0;
+}
+.service .tips {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-weight: bold;
+  color: #cf000d;
+  border: 1px dashed #cf000d;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.service .store__box {
+  margin-bottom: 12px;
+}
+.service .store__img {
+  float: left;
+  width: 325px;
+  height: 100%;
+}
+.service .store__content {
+  float: left;
+  margin-left: 20px;
+  width: 565px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.service .store__title {
+  margin-bottom: 12px;
+}
+.service .store__info {
+  float: left;
+  width: 50%;
+}
+.service .store__info.row {
+  float: left;
+  width: 100%;
+}
+.service .store__label {
+  float: left;
+  line-height: 25px;
+}
+.service .store__text {
+  float: left;
+  line-height: 25px;
+}
+.service .none-store {
+  margin-left: 300px;
+  text-align: center;
+  color: #cf000d;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
+  width: 200px;
+  border: 1px dashed #cf000d;
+  border-radius: 3px;
+}

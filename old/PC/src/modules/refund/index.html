@@ -1,0 +1,335 @@
+{{ if first }}
+<ul class="refund-step">
+  <li class="refund-step--item done">
+    <span>1.买家申请退款</span>
+  </li>
+  <li class="refund-step--item">
+    <span>2.商家处理退款中</span>
+  </li>
+  <li class="refund-step--item">
+    <span>3.退款成功</span>
+  </li>
+</ul>
+
+<div class="refund">
+  <div class="refund-l">
+    <div class="inner">
+      <div class="item cl">
+        <div class="label">
+          <span>退款商品:</span>
+        </div>
+        <div class="content">
+          <div class="img">
+            <img src="https://dummyimage.com/70x70/000/fff" alt="" />
+          </div>
+          <div class="desc">
+            <div class="txt">
+              网红枕头枕芯正品一对装枕头学生宿舍床单人一只装成人护颈椎枕女
+            </div>
+            <div class="txt txt-grey">颜色分类:简约格子【枕芯一对装】</div>
+          </div>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>服务类型:</span>
+        </div>
+        <div class="content">
+          <div class="radio">
+            <input type="radio" title="" name="type" checked /><span
+              >仅退款</span
+            >
+          </div>
+          <div class="radio">
+            <input type="radio" title="" name="type" /><span>退货退款</span>
+          </div>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>货物状态:</span>
+        </div>
+        <div class="content">
+          <div class="radio">
+            <input type="radio" title="" name="status" checked /><span
+              >未收到货</span
+            >
+          </div>
+          <div class="radio">
+            <input type="radio" title="" name="status" /><span>已收到货</span>
+          </div>
+          <div class="txt-grey">
+            卖家已发货,请先 查看<a
+              href="javascript: void(0);"
+              class="a__primary"
+              >物流信息</a
+            >
+            ,或联系卖家
+          </div>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>退款原因:</span>
+        </div>
+        <div class="content">
+          <div class="selectBox__wrapper">
+            <div class="selectBox" id="selectBox">
+              <input
+                class="selectBox-input"
+                type="text"
+                title=""
+                placeholder="请选择"
+                readonly
+                autocomplete="off"
+              />
+              <span class="iconfont icon-dropdowm"></span>
+            </div>
+            <div class="selectBox-content" id="selectBox-content">
+              <ul>
+                <li>不喜欢/不想要</li>
+                <li>空包裹</li>
+                <li>未按约定时间发货</li>
+                <li>快递/物流一直没送到</li>
+                <li>快递/物流无跟踪记录</li>
+                <li>货物破损已拒签</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>退款金额:</span>
+        </div>
+        <div class="content">
+          <div class="input">
+            <input type="text" title="" class="input__inner" />
+          </div>
+          <div class="tips">
+            卖家已发货,请先 查看<a href="">物流信息</a> ,或联系卖家
+          </div>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>退款说明:</span>
+        </div>
+        <div class="textarea">
+          <textarea
+            class="disabled"
+            placeholder="退款说明"
+            name=""
+            id=""
+            rows="5"
+            maxlength="200"
+            onchange="this.value=this.value.substring(0, 200)"
+            onkeydown="this.value=this.value.substring(0, 200)"
+            onkeyup="this.value=this.value.substring(0, 200)"
+            title=""
+          ></textarea>
+          <span>200</span>
+        </div>
+      </div>
+      <div class="item cl p20">
+        <div class="label">
+          <span>上传图片:</span>
+        </div>
+        <div class="input">
+          <input title="" type="file" />
+        </div>
+      </div>
+      <div class="item p20">
+        <div class="button">
+          <a class="a__danger has-bg">确认提交</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="refund-r">
+    <h3>订单详情</h3>
+    <div class="product-details cl">
+      <div class="img">
+        <a href="https://dummyimage.com/60x60/000/fff">
+          <img src="https://dummyimage.com/60x60/000/fff" alt="" />
+        </a>
+      </div>
+      <div class="desc">
+        <div class="title">
+          夏装新款男士短袖T恤衬衫领POLO衫潮流韩版半袖上衣服纯棉体恤男
+        </div>
+        <ul>
+          <li>颜色:130白色+378白色</li>
+          <li>尺码:XL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{ /if }}
+<!------------------------------------------------------->
+{{ if second }}
+<ul class="refund-step">
+  <li class="refund-step--item done">
+    <span>1.买家申请退款</span>
+  </li>
+  <li class="refund-step--item done">
+    <span>2.商家处理退款中</span>
+  </li>
+  <li class="refund-step--item">
+    <span>3.退款成功</span>
+  </li>
+</ul>
+
+<div class="refund">
+  <div class="refund-l">
+    <div class="inner">
+      <div class="title cl">
+        <h4>
+          请等待商家处理<span
+            ><i class="iconfont icon-time"></i>还剩2天23时59分</span
+          >
+        </h4>
+      </div>
+
+      <div class="desc">您已成功发起退款申请，请等待客服处理</div>
+
+      <div class="tips">
+        <ul>
+          <li>订单退款同意后，请按照给出的退货地址退货，并请记录退货运单号</li>
+          <li>如长时间订单未处理，可致电联系：020-85977523</li>
+        </ul>
+      </div>
+
+      <div class="opt">
+        <a href="" class="a__danger has-bg">修改申请</a>
+        <a href="" class="a__primary">撤销申请</a>
+      </div>
+    </div>
+  </div>
+  <div class="refund-r">
+    <h3>订单详情</h3>
+    <div class="product-details cl">
+      <div class="img">
+        <img src="../../../img/product22.jpg" alt="" />
+      </div>
+      <div class="desc">
+        <div class="title">
+          夏装新款男士短袖T恤衬衫领POLO衫潮流韩版半袖上衣服纯棉体恤男
+        </div>
+        <ul>
+          <li>颜色:130白色+378白色</li>
+          <li>尺码:XL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{ /if }}
+
+<!--=====================================================-->
+{{ if fail }}
+<ul class="refund-step">
+  <li class="refund-step--item done">
+    <span>1.买家申请退款</span>
+  </li>
+  <li class="refund-step--item done">
+    <span>2.商家处理退款中</span>
+  </li>
+  <li class="refund-step--item done">
+    <span>3.退款成功</span>
+  </li>
+</ul>
+<div class="refund">
+  <div class="refund-l">
+    <div class="inner fail">
+      <div class="fl">
+        <i class="iconfont icon-status-refund--error"></i>
+      </div>
+      <div class="fr">
+        <h4 class="title">退款失败</h4>
+        <div class="date">时间：2019-03-07 11:21:51</div>
+        <div class="desc">因您撤销操作申请，退款已关闭</div>
+        <div class="direction">
+          <span
+            >操作：<a href="" class="btn--txt">重新申请</a>
+            <a href="" class="btn--txt">返回我的订单</a></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="refund-r">
+    <h3>订单详情</h3>
+    <div class="product-details cl">
+      <div class="img">
+        <a href="">
+          <img src="https://dummyimage.com/70x70/000/fff" alt="" />
+        </a>
+      </div>
+      <div class="desc">
+        <div class="title">
+          夏装新款男士短袖T恤衬衫领POLO衫潮流韩版半袖上衣服纯棉体恤男
+        </div>
+        <ul>
+          <li>颜色:130白色+378白色</li>
+          <li>尺码:XL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{ /if }}
+
+<!--=====================================================-->
+{{ if success }}
+<ul class="refund-step">
+  <li class="refund-step--item done">
+    <span>1.买家申请退款</span>
+  </li>
+  <li class="refund-step--item done">
+    <span>2.商家处理退款中</span>
+  </li>
+  <li class="refund-step--item done">
+    <span>3.退款成功</span>
+  </li>
+</ul>
+
+<div class="refund">
+  <div class="refund-l">
+    <div class="inner success">
+      <div class="fl">
+        <i class="iconfont icon-status-refund--success"></i>
+      </div>
+      <div class="fr">
+        <h4 class="title">退款成功</h4>
+        <div class="date">时间：2019-03-07 11:21:51</div>
+        <div class="price"><span>退款总金额:</span><em>￥ 100.00</em></div>
+        <div class="direction">
+          <span>退款去向：</span><em>小钱包</em
+          ><a href="javascript:void(0);" class="btn--txt">查看小钱包</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="refund-r">
+    <h3>订单详情</h3>
+    <div class="product-details cl">
+      <div class="img">
+        <a href="">
+          <img src="https://dummyimage.com/70x70/000/fff" alt="" />
+        </a>
+      </div>
+      <div class="desc">
+        <div class="title">
+          夏装新款男士短袖T恤衬衫领POLO衫潮流韩版半袖上衣服纯棉体恤男
+        </div>
+        <ul>
+          <li>颜色:130白色+378白色</li>
+          <li>尺码:XL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{ /if }}

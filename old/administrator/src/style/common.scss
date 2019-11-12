@@ -1,0 +1,78 @@
+/**
+ * 1. 自己定义的重置样式
+ * 2.
+ */
+.container {
+  padding: 20px;
+  min-height: calc(100vh - 124px);
+  &.bg {
+    background: #f5f7fa;
+  }
+  &.bg1 {
+    background: #e9eef3;
+  }
+}
+//
+//p {
+//  margin: 0;
+//  line-height: 0;
+//}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.common {
+  padding: 20px 30px;
+}
+
+.cl:after { clear: both; display: block; content: ""; }
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+//app-main组件的布局
+.m1 {
+  .box {
+    background: #fff;
+    padding: 10px;
+    text-align: right;
+  }
+  .header { margin-bottom: 10px; }
+
+  .el-pagination {
+    margin-top: 10px;
+  }
+
+  .el-table {
+    border-top: 1px solid #EBEEF5
+  }
+}
+
+.line {
+  text-align: center;
+}
+.download-btn {
+  width: 74px;
+}
+.search-options {
+  width: 80px;
+  float: right;
+}
+.search-input {
+  width: 200px;
+  float: right;
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  .search-input {
+    width: 130px;
+    margin-right: 4px;
+  }
+}

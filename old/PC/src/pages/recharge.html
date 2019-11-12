@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<template src="common/head.html" title="个人中心"></template>
+<body>
+<template src="common/topnav.html"></template>
+
+<template src="common/header.html"></template>
+
+<section class="admin p30">
+    <div class="container">
+        <!--侧边栏-->
+        <template src="aside/index.html"></template>
+        <!--主体-->
+        <template src="admin/recharge.html"></template>
+    </div>
+</section>
+
+<template src="common/footer.html" dialog valid></template>
+<script>
+    function recharge() {
+        var content = "";
+        content += '<div class="recharge-code">';
+            content += '<img src="https://dummyimage.com/300x300/000/fff" alt="300x300" width="300" height="300" />';
+        content += '<div class="recharge-comment">温馨提示：充值或有延迟，长时间未到账请联系惠而信在线客服。</div>';
+        $.dialog({
+            id: 'recharge-dialog',
+            title: '扫码充值',
+            hideHeader: false,
+            hideClose: false,
+            content: content,
+            onClose: function() {
+               $("#recharge-dialog").remove();
+            }
+        });
+    }
+</script>
+</body>
+</html>
+

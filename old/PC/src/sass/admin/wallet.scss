@@ -1,0 +1,111 @@
+/**************************************************************
+************************* 钱包页面 ****************************
+**************************************************************/
+.wallet { background-color: #fff; }
+.w {
+  &-opt {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    a {
+      color: #4a90e2;
+      &:hover {
+        color: #d0021b;
+      }
+    }
+  }
+
+  &-info {
+    padding: 0 50px;
+    table {
+      width: 100%;
+      tr {
+
+      }
+      td {
+        height: 140px;
+        padding: 20px 0;
+      }
+      .td1 {
+        &-title { font-size: 16px; font-weight: 700; }
+        &-price {
+          font: 700 24px/1.2 "Tahoma";
+          em { font-size: 50px; }
+        }
+      }
+      .td2 {
+        div { padding: 5px 0;  }
+        i { margin-right: 8px; }
+        em { margin-left: 8px; font-weight: 700;  }
+      }
+      .td3 {
+        text-align: center;
+        a {
+          display: inline-block;
+          border-radius: 3px;
+          width: 170px;
+          margin-bottom: 7px;
+          background-color: #e4393c;
+          color: #fff;
+          font-size: 16px;
+          text-align: center;
+        }
+        p { color: #d0021b; }
+      }
+    }
+  }
+
+  &-record {
+    position: relative;
+    padding: 30px;
+    ul {
+      zoom: 1;
+      overflow: hidden;
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+      }
+      li {
+        float: left; font-weight: 700;  width: 170px; height: 34px; line-height: 34px; text-align: center;
+      }
+    }
+    &--btn {
+      position: absolute;
+      top: 40px;
+      right: 30px;
+    }
+    &--process {
+      position: relative;
+      height: 2px;
+      overflow: hidden;
+      background-color: #ced4e0;
+    }
+    &--line {
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: #e4393c;
+    }
+    &--box {
+      table {
+        width: 100%;
+        text-align: center;
+        th {
+          height: 42px;
+          background-color: #fbfbfc;
+          color: #838a96;
+          font-size: 14px;
+        }
+        td {
+          font-size: 13px;
+          height: 38px;
+          color: #999;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+//子菜单
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  left: 230px;
+  background: #f4f4f4;
+  width: 630px;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 30px 20px;
+  a {
+    font-size: 13px;
+  }
+  dl {
+    padding: 10px;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  dt {
+    float: left;
+    margin-right: 14px;
+    a {
+      width: 80px;
+      text-align: right;
+    }
+  }
+  dd {
+    float: left;
+    width: 490px;
+    a {
+      padding: 0 10px;
+      line-height: 16px;
+      border-left: 1px solid #e3e3e3;
+      white-space: nowrap;
+    }
+  }
+  a {
+    float: left;
+    display: block;
+    margin: 6px 0;
+    &:hover {
+      color: #005abc;
+    }
+  }
+}
+// 菜单
+
+//最后边框
+.menu .inner:last-child .item-info {
+  border-bottom: 0;
+}
+//其他页面一开始菜单隐藏
+.menu-entrance.index .menu {
+  display: block;
+}

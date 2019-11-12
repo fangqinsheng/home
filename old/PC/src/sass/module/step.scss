@@ -1,0 +1,86 @@
+/************************************************************************************
+********************************** step步骤条样式 ************************************
+************************************************************************************/
+.step {
+  margin-top: 60px;
+  dl {
+    float: left;
+    position: relative;
+    width: 160px;
+    top: -5px;
+    border-top: 5px solid #ccc;
+    &.done {
+      border-top-color: #4A90E2;
+      dt {
+        background-color: #4A90E2;
+      }
+      dd {
+        color: #4A90E2;
+      }
+    }
+    &.doing {
+      border-top-color: #BFDBFB;
+      dt {
+        background-color: #BFDBFB;
+      }
+      dd {
+        color: #BFDBFB;
+      }
+    }
+  }
+
+  dt {
+    text-align: center;
+    position: relative;
+    margin: -15px auto 0;
+    color: #fff;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    background-color: #ccc;
+    line-height: 24px;
+    border-radius: 50%;
+    behavior: url(assets/PIE.htc);
+  }
+
+  dd {
+    color: #ccc;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+.step {
+  &-item {
+    float: left;
+    width: 33.33333333%;
+    text-align: center;
+    line-height: 38px;
+    height: 38px;
+    .content {
+      background: #ccc;
+      height: 38px;
+      margin-left: 21px;
+      span {
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+    &.doing {
+      .content {
+        background: #dd2244;
+      }
+    }
+  }
+
+  &-arrow {
+    float: left;
+    width: 21px;
+    height: 38px;
+  }
+  div.step-arrow {
+    background: #dd2244;
+  }
+}
+
+

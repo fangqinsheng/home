@@ -1,0 +1,29 @@
+@import "../variable.scss";
+
+/************************ h1-h6 **************************************/
+h1,h2,h3,h4,h5,h6{
+  font-weight: 500; line-height: 1.1; color: inherit;
+  small {
+    font-weight:normal;
+    line-height:1;
+    color: #999;
+  }
+}
+
+h1 { font-size: $font-size--larger; }
+
+h2 { font-size: $font-size--large }
+
+h3 { font-size: $font-size--medium }
+
+h4 { font-size: $font-size--base }
+
+h5 { font-size: $font-size--small }
+
+h6 { font-size: $font-size--mini }
+
+p { font-size: $font-size--base; line-height: 1.6; }
+
+strong {}
+
+em {}

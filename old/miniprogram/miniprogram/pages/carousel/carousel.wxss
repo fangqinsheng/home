@@ -1,0 +1,193 @@
+/* pages/carousel/carousel.wxss */
+/* ==================================== page =================================== */
+
+.page{
+  height: 100%; font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  /* overflow-y: scroll;  */
+}
+
+/* ================================= carousel ================================== */
+
+.gallery {
+  height: 100%;
+  width: 100%;
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+
+.gallery image { width: 100%; height: 100%; display: block; line-height: 0; }
+
+.scaleImage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  z-index: 6;
+  top: 0;
+  left: 0;
+}
+
+.scaleImage .img {
+  position: absolute;
+  width: 690rpx;
+  height: 300rpx;
+  transform-origin: center center;
+}
+
+
+/* ================================= aside ================================== */
+
+.aside {
+  width: 100%;
+  height: 100%;
+}
+
+.aside .modal {
+	transition: 0.4s ease all;
+  transform: rotate(0deg) scale(1) translate(100%,0%); 
+  height: 100%;
+  width: 75%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.aside .modal.active{
+  transform: rotate(0deg) scale(1) translate(0,0%); 
+  /* -webkit-transform: rotate(0deg) scale(1) translate(0,0%);  */
+}
+
+.aside .modal .box {
+  height: 100%; 
+}
+
+/* ================================= mask ================================== */
+
+.mask {
+	position: fixed;
+	top: 0; right: 0; left: 0; bottom: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, .4)
+}
+.mask.show {
+	display: block;
+}
+
+.wc{
+  color: #333;
+  padding: 30rpx 40rpx;
+	border-top: 1px solid #e3e4e5;
+	display: flex;
+	justify-content: space-between;
+}
+.wc .txt {
+	text-align: right
+}
+
+.guide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.guide text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #fff;
+  z-index: 3;
+  transform: translate(-50%, 0);
+}
+
+.guide .second.show {
+  display: block;
+}
+
+.guide .first.hide {
+  display: none;
+}
+
+.guide .second {
+  display: none;
+}
+
+.guide.show {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+
+/* ================================= dialog ================================== */
+.dialog__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.dialog {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #fff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  transform: translate(0 100%)
+}
+/* .mask */
+.dialog .mask {
+	position: fixed;
+  width: 100%;
+  height: 100%;
+	top: 0; right: 0; left: 0; bottom: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, .4)
+}
+.dialog .mask.show {
+	display: block;
+}
+
+.dialog .title {
+  line-height: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.dialog .description {
+  background-color: #fff;
+  padding: 30rpx 40rpx;
+  line-height: 1.6
+}
+
+.dialog .description .greeting {
+  font-size: 30rpx;
+  display: block;
+
+}
+
+.dialog .btn {
+  text-align: center;
+  margin-top: 20rpx;
+  background-color: #fff;
+   border-top: 1px solid #f3f3f3;
+}
+
+.dialog .btn button { 
+  font-size: 30rpx;
+  color: rgba(26,173,25,.6);
+}

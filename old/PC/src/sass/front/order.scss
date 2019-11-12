@@ -1,0 +1,432 @@
+/*************************** 公共 **************************/
+.order {
+  padding: 20px 0;
+  //标题
+  &-title {
+    //margin-top: 20px;
+    i {
+      font-size: 24px;
+      line-height: 38px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    h2 {
+      color: #4a90e2;
+      line-height: 35px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+  //盒子
+  &-box {
+    margin-top: 20px;
+  }
+  //清单头部
+  &-header {
+    background-color: #f3f3f3;
+    border: 1px solid #e9e9e9;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    padding: 0 10px;
+    .column {
+      float: left;
+    }
+    .t-checkbox {
+      width: 140px;
+      input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .t-name {
+      width: 326px;
+    }
+    .t-spec {
+      width: 150px;
+      text-align: center;
+      margin-right: 30px;
+    }
+    .t-price {
+      width: 100px;
+      text-align: center;
+    }
+    .t-num {
+      width: 132px;
+      text-align: center;
+    }
+    .t-sum {
+      width: 116px;
+      text-align: center;
+    }
+    .t-operate {
+      width: 118px;
+      text-align: center;
+    }
+  }
+  //商品清单
+  &-list {
+    border: 1px solid #f1f1f1;
+    background: #f3fbfe;
+    .item {
+      overflow: hidden;
+      position: relative;
+      padding-left: 40px;
+      border-top: 1px solid #e3e3e3;
+      box-sizing: border-box;
+      zoom: 1;
+      .cell {
+        float: left;
+        padding: 15px 0 10px;
+      }
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+      }
+      &:first-child {
+        border-top: 0;
+      }
+      &.is-selected {
+        background: #e8f0fc;
+      }
+    }
+    //商品信息
+    .g-item {
+      margin-right: 90px;
+    }
+    .g-img {
+      float: left;
+      margin-right: 16px;
+    }
+    .g-name {
+      float: left;
+      font-size: 14px;
+      width: 300px;
+    }
+    //商品规格
+    .g-spec {
+      width: 90px;
+      margin-right: 20px;
+      color: #666;
+    }
+    //商品价格
+    .g-price {
+      width: 100px;
+      padding-right: 60px;
+      text-align: right;
+      color: #666;
+      margin-right: 40px;
+    }
+    //商品数量
+    .g-amount {
+      padding: 15px 0;
+      width: 100px;
+      text-align: right;
+      &__box {
+        a {
+          float: left;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 25px;
+          border: 1px solid #cacbcb;
+          background-color: #fff;
+        }
+        input {
+          float: left;
+          width: 46px;
+          height: 25px;
+          line-height: 25px;
+          border: 1px solid #cacbcb;
+          outline: 0;
+          text-align: center;
+        }
+        .reduce {
+          border-right: none;
+          &.disabled {
+            color: #cbcbcb;
+            cursor: default;
+          }
+        }
+        .add {
+          border-left: none;
+        }
+      }
+    }
+    //商品总价
+    .g-sum {
+      width: 100px;
+      padding-right: 40px;
+      text-align: right;
+    }
+    //单选框
+    .g-checkbox {
+      position: absolute;
+      z-index: 3;
+      left: 10px;
+      top: 0;
+      width: 30px;
+      min-height: 10px;
+      input {
+        vertical-align: middle;
+        padding: 0;
+        margin: 0 3px 0 0;
+      }
+    }
+    //操作
+    .g-operate {
+      width: 190px;
+      text-align: center;
+      a { margin-right: 8px; }
+    }
+  }
+  //操作条
+  &-toolbar {
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    //border: 1px solid #e9e9e9;
+    overflow: hidden;
+    .toolbar-left {
+      float: left;
+    }
+    .toolbar-right {
+      float: right;
+    }
+    .select-all {
+      float: left;
+      padding: 16px 0 16px 9px;
+      line-height: 18px;
+      height: 18px;
+      *width: 60px;
+      white-space: nowrap;
+      input {
+        vertical-align: middle;
+      }
+    }
+
+    .other-operation {
+      float: left;
+      height: 50px;
+      margin-left: 12px;
+      line-height: 50px;
+      width: 260px;
+      a {
+        margin-right: 8px;
+      }
+    }
+
+    .amount-sum,
+    .price-sum,
+    .toolbar-btn {
+      float: right;
+    }
+
+    .toolbar-btn {
+      background-color: #f20014;
+      color: #fff;
+      cursor: pointer;
+      &.disabled {
+        background-color: #6c6c6c;
+        cursor: auto;
+      }
+      a {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        font-family: "Microsoft YaHei";
+        width: 94px;
+        height: 52px;
+        line-height: 52px;
+        background-color: inherit;
+        color: inherit;
+        cursor: inherit;
+      }
+    }
+
+    .price-sum,
+    .amount-sum {
+      text-align: right;
+      line-height: 20px;
+      margin-right: 10px;
+      margin-top: 8px;
+      color: #666;
+      em {
+        color: #f20014;
+      }
+    }
+    .price-sum em {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .price-sum a {
+      display: block;
+      &:hover {
+        color: #d0021b;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.card {
+  .hd {
+    padding: 10px 20px;
+    background-color: #f3f3f3;
+    h3 {
+      position: relative;
+      color: #333;
+      font: bold 15px/20px "Microsoft YaHei";
+      .add-address {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 13px;
+      }
+    }
+  }
+  .item {
+    position: relative;
+    line-height: 40px;
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+    .label {
+      float: left;
+      width: 180px;
+      text-align: right;
+    }
+    .value {
+      float: left;
+      margin-left: 12px;
+    }
+  }
+}
+
+// 收货信息
+.delivery-address {
+  padding: 30px 20px;
+  .item {
+    position: relative;
+    width: 99.8%;
+    height: 32px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+    &.is-selected {
+      b {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+        background: url("../img/payment/selected-icon.png") no-repeat;
+      }
+      .tag {
+        border: 2px solid #e4393c;
+        padding: 5px 10px;
+      }
+      .opt {
+        .set-default-address { display: none; }
+      }
+    }
+    &.hover {
+      background: #fff3f3;
+      .opt {
+        display: block;
+      }
+    }
+  }
+  .tag {
+    position: relative;
+    float: left;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 122px;
+    height: 18px;
+    line-height: 18px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  // 折叠展开开关
+  .switch {
+    color: #666;
+    margin-top: 20px;
+    margin-left: 96px;
+    cursor: pointer;
+    i {
+      font-size: 12px;
+    }
+  }
+  .inner {
+    position: relative;
+    overflow: hidden;
+    width: 938px;
+    margin: 0 auto;
+    height: 32px;
+    z-index: 10;
+  }
+  .details {
+    float: left;
+    margin-left: 15px;
+    line-height: 30px;
+    height: 30px;
+  }
+  .opt {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: 30px;
+    height: 30px;
+    a {
+      margin-right: 6px;
+    }
+  }
+}
+
+// 结算信息
+.order {
+  .check-info {
+    float: right;
+    margin-top: 10px;
+    padding: 0 20px;
+    width: 300px;
+    .handle-export {
+    }
+    .row {
+      text-align: right;
+      .btn {
+        text-align: center;
+        padding: 0;
+        width: 126px;
+        line-height: 42px;
+        height: 42px;
+        //margin-right: 36px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .total-sum {
+    color: #e4393c;
+    font-size: 20px;
+    vertical-align: middle;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+}

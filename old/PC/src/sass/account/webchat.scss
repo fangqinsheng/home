@@ -1,0 +1,39 @@
+/*****************************  webchat ********************************/
+.webchat {
+  .card {
+    background: #fff;
+    margin: 30px 0;
+    .hd {
+      padding: 0 40px;
+      line-height: 66px;
+      strong {
+        vertical-align: middle;
+        font-size: 28px;
+      }
+      .desc {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 60px;
+        font-size: 18px;
+        em {
+          color: #d0021b;
+        }
+      }
+    }
+    .bd {
+      padding: 60px 170px;
+      .desc {
+        text-align: center;
+        background: #ff6d6d;
+        border: 1px solid #c9c9c9;
+        color: #fff;
+        font-size: 20px;
+        line-height: 66px;
+        height: 64px;
+      }
+    }
+    .fl {
+      margin-top: 60px;
+    }
+  }
+}

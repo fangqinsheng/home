@@ -1,0 +1,79 @@
+<!--pages/collect/collect.wxml-->
+<view class="index">
+
+  <view class="err-msg {{ errorModal ? 'active' : '' }}">
+    <text>{{ errorModal }}</text>
+  </view>
+
+  <!-- <view class="block" wx:if="{{ errorModal == false }}"></view> -->
+
+	<view class="content">
+		<form class="form" bindsubmit='submitForm'>
+
+			<view class="item">
+				<text class="label required">您的姓名：</text>
+				<view class="input">
+					<input name="name" placeholder='**文(请输入完整姓名)'></input>
+				</view>
+			</view>
+
+      <view class="item">
+				<text class="label required">选择地区：</text>
+				<view class="input">
+					<picker name="region" mode="region" bindchange="bindAreaChange" value="{{ region.code }}">
+						<view class="picker">{{ region.name[0] }} {{ region.name[1] }} {{ region.name[2] }}</view>
+					</picker>
+				</view>
+			</view>
+
+       <view class="item">
+				<text class="label required">手机号码：</text>
+				<view class="input">
+					<input name="mobile" bindinput="mobileInput" type="number" placeholder='请填写手机号码'></input>
+          <text bindtap="sendSMS" class="valid-btn" wx:if="{{ !status }}">发送验证码</text>
+          <text class="valid-btn" wx:if="{{ status }}" >{{sec}}后重新获验证码</text>
+				</view>
+			</view>
+
+       <view class="item">
+				<text class="label required">验证码：</text>
+				<view class="input">
+					<input name="validCode" placeholder='**文(请输入完整姓名)'></input>
+				</view>
+			</view>
+
+       <view class="item">
+				<text class="label">公司名称：</text>
+				<view class="input">
+					<input name="companyName" placeholder='请输入您的公司名称'></input>
+				</view>
+			</view>
+
+       <view class="item">
+				<text class="label">常用邮箱：</text>
+				<view class="input">
+					<input name="email" placeholder='请输入您的常用邮箱' ></input>
+				</view>
+			</view>
+
+      <view class="item">
+				<text class="label">了解产品：</text>
+				<view class="input">
+					<input name="product" placeholder='输入您想了解的产品'></input>
+				</view>
+			</view>
+
+      <view class="tips">
+        <text class="required">为必填项，表单所填信息不会对外公布，请放心填写！</text>
+      </view>
+  
+
+      <button disabled="{{ disabled }}" form-type="submit" class="submit-btn">确认</button>
+		
+		</form> 
+	</view>
+</view>
+
+<view class="site-footer">
+  <text>Copyright ©2019 welshine.com All Rights Reserved.</text>
+</view>

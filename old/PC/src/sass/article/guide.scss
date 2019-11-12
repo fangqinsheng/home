@@ -1,0 +1,95 @@
+.guide {
+  padding: 30px 0;
+  .aside {
+    float: left;
+    width: 200px;
+  }
+  .main {
+    margin-left: 220px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #c9c9c9;
+    border-radius: 10px;
+    padding: 20px 30px 30px;
+    .hd {
+      font-size: 14px;
+      padding: 10px 20px;
+      background: #f5f5f5;
+      border-top: 2px solid #005abc;
+    }
+  }
+  .title {
+    zoom: 1;
+    overflow: hidden;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+      visibility: hidden;
+      height: 0;
+    }
+    .num {
+      float: left;
+      height: 80px;
+      b {
+        font: 60px/80px "Impact";
+        color: #4a90e2;
+      }
+    }
+    .content {
+      float: left;
+      margin-top: 15px;
+      margin-left: 20px;
+      h2 {
+        font: 600 18px/25px "PingFangSC-Semibold";
+        color: #4a90e2;
+        margin-bottom: 8px;
+      }
+    }
+
+    .desc {
+      font-size: 14px/20px "PingFangSC-Regular";
+    }
+  }
+}
+
+// 手风琴样式
+.accordion {
+
+  width: 100%;
+
+  .item {
+    position: relative;
+    h4 {  background-color: #4a90e2; color: #fff; padding-left: 40px; }
+    i {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 14px;
+    }
+    &.selected {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .info {
+    display: none;
+    background: #fff;
+    li {
+      line-height: 40px;
+      height: 40px;
+      padding-left: 40px;
+      a {
+        display: block;
+        transition: color 0.4s ease;
+        font-size: 14px;
+        &.on {
+          color: #0d64b1;
+        }
+        &:hover {
+          color: #0d64b1;
+        }
+      }
+    }
+  }
+}

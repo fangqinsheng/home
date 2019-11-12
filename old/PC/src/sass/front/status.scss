@@ -1,0 +1,108 @@
+.error {
+  background: #e3e3e3; position: relative;
+  &-box {
+    width: 404px;
+    position: absolute; top: 50%; left: 50%; margin-top: -145px; margin-left: -202px;
+  }
+  &-img { margin-bottom: 50px; }
+  &-btn {
+    text-align: center;
+    a { margin-right: 10px; display: inline-block; }
+  }
+}
+
+/******************************************************************
+************************** 支付状态页 ******************************
+******************************************************************/
+.payment-status {
+  background-color: #fff;
+  padding: 40px 0;
+  &--box {
+    height: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #e3e3e6;
+    padding: 90px 0;
+    .inner {
+      width: 660px;
+      margin: 0 auto;
+      overflow: hidden;
+      zoom: 1;
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+        visibility: hidden;
+      }
+    }
+    //状态图标
+    .icon-status {
+      float: left;
+      line-height: 100px;
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 62px;
+        height: 62px;
+      }
+    }
+    //响应内容
+    .payment-txt {
+      float: left;
+      margin-left: 20px;
+      .title {
+        font: 30px/40px "Microsoft YaHei";
+        margin-bottom: 4px;
+      }
+      .desc {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      .group {
+        a {
+          display: inline-block;
+          margin-right: 8px;
+          padding: 5px 20px;
+        }
+      }
+      .detail {
+        font-size: 16px;
+        em {
+          color: #d0021b;
+        }
+      }
+    }
+  }
+  //提示操作
+  .tips {
+    margin-bottom: 20px;
+    font-size: 15px;
+    a {
+      color: #4a90e2;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  //轮播广告
+  .adv {
+    .slick-list { font-size: 0; }
+  }
+}
+
+// 支付成功
+.payment-status.success .icon-status i {
+  background: url("../../img/icon/icon-success.png") no-repeat;
+  background-size: 100% 100%;
+}
+.payment-status.success .title {
+  color: #1aad19;
+}
+// 支付失败
+.payment-status.error .icon-status i {
+  background: url("../../img/icon/icon-error.png") no-repeat;
+  background-size: 100% 100%;
+}
+.payment-status.error .title {
+  color: #d0021b;
+}

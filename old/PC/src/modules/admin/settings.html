@@ -1,0 +1,139 @@
+<section class="admin-main settings" id="settings">
+    <h2 class="settings-title">
+        <i class="{{icon}}"></i><span>{{ title }}</span>
+    </h2>
+    <div class="settings">
+        <div class="settings-box">
+            <div class="inner">
+                {{ if email }}
+                <div class="item">
+                    <div class="label">邮箱：</div>
+                    <div class="value">
+                        <input type="text" name="email" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">邮箱验证码：</div>
+                    <div class="value">
+                        <input type="text" name="emailValid" title=""/>
+                    </div>
+                </div>
+                {{ /if }}
+                {{ if phone }}
+                <div class="item">
+                    <div class="label">新手机号码：</div>
+                    <div class="value">
+                        <input type="text" name="mobile" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">短信验证码：</div>
+                    <div class="value">
+                        <input type="text" name="mobileValid" class="valid-phone" title=""/><a href="" class="g-validcode">获取验证码</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">验证码：</div>
+                    <div class="value">
+                        <input type="text" name="valid" title=""/>
+                        <a href="" class="g-validSMS">
+                            <img src="https://dummyimage.com/80x36/000/fff" alt="80x36" width="80" height="36" />
+                        </a>
+                    </div>
+                </div>
+                {{ /if }}
+                {{ if payment }}
+                <div class="item">
+                    <div class="label">密码：</div>
+                    <div class="value">
+                        <input type="password" name="password" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">确认密码：</div>
+                    <div class="value">
+                        <input type="password" name="checkPassword" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">手机：</div>
+                    <div class="value">
+                        <input type="text" name="mobile" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">短信验证码：</div>
+                    <div class="value">
+                        <input type="text" name="mobileValid" class="valid-phone" title=""/><a href="" class="g-validcode">获取验证码</a>
+                    </div>
+                </div>
+                {{ /if }}
+                {{ if password }}
+                <div class="item">
+                    <div class="label">旧密码：</div>
+                    <div class="value">
+                        <input type="password" name="oldPassword" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">新密码：</div>
+                    <div class="value">
+                        <input type="password" name="newPassword" title=""/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">确认密码：</div>
+                    <div class="value">
+                        <input type="password" name="checkPassword" title=""/>
+                    </div>
+                </div>
+                {{ /if }}
+                <div class="item">
+                    <div class="label"> </div>
+                    <div class="value">
+                        <a href="" class="handle-save">立即设置</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $().ready(function () {
+        $("#settings").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                emailValid: {
+                    required: true
+                },
+                name: "required",
+                mobile: {
+                    required: true,
+                    digits: true
+                },
+                mobileValid: {
+                    required: true
+                },
+                password: {
+                    require:true
+                }
+            },
+            messages: {
+                email: {
+                    required: "请输入您的邮箱",
+                    email: "请输入正确的邮箱地址"
+                },
+                emailValid: "请输入邮箱验证码",
+                mobile: {
+                    required: "请输入您的手机号码",
+                    digits: "请输入正确的13位数字手机号码"
+                },
+                mobileValid: "请输入您的手机验证码"
+            }
+        })
+    })
+</script>

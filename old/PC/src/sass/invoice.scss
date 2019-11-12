@@ -1,0 +1,181 @@
+/*********************************************************
+******************** invoice发票弹框***********************
+*********************************************************/
+.invoice {
+  background-color: #fff;
+  &-tab {
+    li {
+      float: left; position: relative; margin-right: 10px; cursor: pointer;
+      border: 1px solid #ebebeb; padding: 10px 24px;
+      &.ui-tabs-active {
+        border: 2px solid #467cd4; padding: 9px 23px; cursor: default;
+        b {
+          display: block; position: absolute; right: 0; bottom: 0;
+          width: 12px; height: 12px; overflow: hidden;
+          background: url("../img/selected-icon.png") no-repeat;
+        }
+      }
+    }
+  }
+  //内容
+  &-box {
+
+  }
+  //表单
+  &-form {}
+  // 黄色描述
+  &-desc {
+    background-color: #fffaea; padding: 10px; margin-bottom: 15px;
+    p { font-size: 12px; }
+  }
+  // 当前选项
+  &-option {
+    .item {
+      margin-bottom: 15px;
+      &:after { content: ''; display: block; clear: both; }
+    }
+    span {
+      float: left; height: 18px; padding: 4px 0 3px; text-align: right;
+      width: 110px; line-height: 24px; margin-right: 20px; font-size: 14px;
+    }
+  }
+  // 纸质发票步骤
+  &-step {
+    margin-bottom: 15px; margin-left: 20px;
+    li {
+      padding: 7px; color: #999; border: 1px dotted #999; height: 18px; line-height: 18px; position: relative;
+      &.item {
+        &.current { border: 1px dotted #333; color: #333; }
+      }
+      &.cable {
+        height: 0; width: 0; margin-top: 17px; cursor: default;
+        border-bottom: none; border-left: none; border-right: none;
+        &.current { border-top-color: #333; }
+      }
+    }
+  }
+  //信息提示
+  &-tips { color: #999; text-align: center; }
+  //按钮组
+  &-btn {
+    text-align: center; margin-top: 15px;
+    a { margin-right: 6px; }
+  }
+
+  &-form {
+
+    .item { line-height: 44px; }
+
+    label {
+      width: 86px; font-size: 12px; margin-right: 10px;
+      &.is-required {
+        &:before { content: '*'; color: #f20014; margin-right: 4px; }
+      }
+    }
+
+    input { height: 30px; }
+  }
+}
+
+
+.invoice-content {
+  padding: 10px 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  .mt {
+    padding: 10px 0;
+    overflow: hidden;
+    zoom: 1;
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      height: 0;
+      visibility: hidden;
+    }
+    ul {
+      float: left;
+      li {
+        padding-right: 20px;
+        a {
+          display: inline-block;
+          padding-bottom: 2px;
+          color: #999;
+          &.cur {
+            padding-bottom: 0;
+            color: #e4393c;
+            border-bottom: 2px solid #e4393c;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .mc {
+    ul {
+      padding-left: 12px;
+      li {
+        text-indent: -12px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.invoice-info {
+  .mt {
+    strong {
+    }
+  }
+  .mc {
+    .form {
+      .item {
+        zoom: 1;
+        overflow: hidden;
+        margin-bottom: 5px;
+        &:after {
+          display: block;
+          content: "";
+          clear: both;
+          height: 0;
+          visibility: hidden;
+        }
+      }
+      .label {
+        float: left;
+        width: 100px;
+        line-height: 38px;
+        height: 38px;
+        text-align: right;
+      }
+      .value {
+        float: left;
+        position: relative;
+        .input {
+          width: 130px;
+          padding: 5px 25px 5px 5px;
+          border: 1px solid #ccc;
+        }
+        .status-error {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          margin-top: 5px;
+          color: #e4393c;
+          margin-left: 5px;
+          background: #ffebeb;
+          border: 1px solid #ffbdbe;
+          padding: 5px 10px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+/*********************************************************
+******************** invoice发票弹框***********************
+*********************************************************/

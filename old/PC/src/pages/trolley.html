@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="微信支付页" slick></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" step></template>
+
+    <template src="common/nav.html"></template>
+
+    <template src="trolley/trolley.html"></template>
+
+    <!--猜你喜欢-->
+    <template src="trolley/rec.html"></template>
+
+    <template src="common/footer.html" trolley slick></template>
+    <script>
+        $(".rec-slider").slick({
+            infinite: true,
+            dots: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
+  </body>
+</html>

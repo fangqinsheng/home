@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="服务网点"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" search></template>
+
+    <section class="article">
+      <div class="container">
+        <div class="article-aside">
+          <ul>
+            <li><a href="brand.html">企业介绍</a></li>
+            <li class="on"><a href="branch.html">线下门店</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="join.html">加入我们</a></li>
+          </ul>
+        </div>
+        <div class="article-content">
+          <div class="main">
+            <div class="paragraph">
+              <img src="img/article/service.jpg" alt="" />
+            </div>
+            <div class="service" id="service">
+              <div id="map" class="map"></div>
+              <div class="tips">点击省市区域，显示服务网点联系地址！</div>
+              <div id="store" class="store"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <template src="common/footer.html"></template>
+  </body>
+  <script src="assets/jsMap.min.js"></script>
+  <script>
+    $(function() {
+      $.getJSON("assets/china.json").done(function(response) {
+        console.log(response);
+        jsMap.config("#map", response, {
+          stroke: {
+            width: 1,
+            color: "#e3e3e3"
+          },
+          width: 950,
+          areaName: {
+            show: true
+          },
+          fill: {
+            basicColor: {
+              sichuan: "#0880ff",
+              shanghai: "#0880ff",
+              hubei: "#0880ff",
+              guangdong: "#0880ff"
+            },
+            hoverColor: "#0880ff",
+            clickColor: "#006bde"
+          },
+          tip: function(id, name) {
+            return (
+                    '<div style="background:#333; color: #fff; padding:15px;"><p style="font-size: 14px;">' +
+                    name +
+                    "</p><p>点击查看该区域服务网点</p></div>"
+            );
+          },
+          clickCallback: function(id, name) {
+            var res = response.china[id].store;
+            var temp = "";
+            if (res) {
+              for (var i = 0; i < res.length; i++) {
+                temp += '<div class="store__box cl">';
+                temp += '<div class="store__img">';
+                temp += '<img src="' + res[i].img + '" alt="">';
+                temp += " </div>";
+                temp += '<div class="store__content">';
+                temp +=
+                        '<h3 class="store__title">' + res[i].name + "</h3>";
+                temp += '<div class="store__info row">';
+                temp += '<span class="store__label">地址：</span>';
+                temp +=
+                        '<span class="store__text">' +
+                        res[i].address +
+                        "</span>";
+                temp += "</div>";
+                temp +=
+                        '<div class="store__info"><span class="store__label">电话：</span><span class="store__text">' +
+                        res[i].tel +
+                        "</span></div>";
+                temp +=
+                        '<div class="store__info"><span class="store__label">传真：</span><span class="store__text">' +
+                        res[i].fox +
+                        "</span></div>";
+                temp +=
+                        '<div class="store__info"><span class="store__label">邮箱：</span><span class="store__text">' +
+                        res[i].email +
+                        "</span></div>";
+                temp +=
+                        '<div class="store__info row"><span class="store__label">服务区域：</span><span class="store__text">' +
+                        res[i].area +
+                        "</span></div>";
+                temp +=
+                        '<div class="store__info row"><span class="store__label">服务时间：</span><span class="store__text">' +
+                        res[i].time +
+                        "</span></div></div></div>";
+              }
+              $("html, body").animate(
+                      {
+                        scrollTop: $(".store").offset().top
+                      },
+                      2000
+              );
+            } else {
+              temp +=
+                      '<div class="none-store">该区域暂无服务网点</div>';
+            }
+            $("#store").html(temp);
+          }
+        });
+      });
+    });
+  </script>
+</html>

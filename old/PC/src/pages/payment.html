@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <template src="common/head.html" title="微信支付页"></template>
+  <body>
+    <template src="common/topnav.html"></template>
+
+    <template src="common/header.html" step></template>
+
+    <div class="account payment">
+      <div class="container">
+        <div class="txt cl">
+          <div class="fl">
+            <div class="payment-title">
+              订单提交成功，请尽快付款！订单编号：<em>209061603456231</em>
+            </div>
+            <div class="payment-subTitle">
+              请您在倒计时
+              <span><template src="countdown/index.html"></template></span>
+              内完成支付，否则订单会被自动取消。如有特殊情况，请联系惠而信客服。
+            </div>
+          </div>
+          <div class="fr">
+            <div class="payment-price">应付金额：￥<em>668</em>元</div>
+            <a href="" class="">订单详情</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="title">支付方式</div>
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" title="" name="payment" />
+                <div class="img">
+                  <img src="img/payment/alipay.png" alt="" />
+                </div>
+                <div class="note">*首选项</div>
+              </li>
+              <li>
+                <input type="radio" title="" name="payment" />
+                <div class="img">
+                  <img src="img/payment/webchat.png" alt="" />
+                </div>
+                <div class="note">*首选项</div>
+              </li>
+              <li>
+                <input type="radio" title="" name="payment" />
+                <div class="img">
+                  <img src="img/payment/bank.png" alt="" />
+                </div>
+              </li>
+              <li>
+                <input type="radio" title="" name="payment" />
+                <div class="img">
+                  <img src="img/payment/wallet.png" alt="" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="operate">
+            <a href="" class="btn btn-default">继续购物</a>
+            <a href="" class="btn btn-default">进入订单中心</a>
+          </div>
+          .
+          <a href="" class="btn btn-danger btn-submit">立即支付</a>
+        </div>
+      </div>
+    </div>
+
+    <template src="common/footer.html" footer></template>
+  </body>
+</html>
